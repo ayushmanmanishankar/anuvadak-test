@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>National Portal of India</title>
+  <link rel="icon" href="/faviconFlag.jpg" />
+  <script>(self.__next_s = self.__next_s || []).push([0, { "children": " console.error = function () {};\n    console.warn = function () {};", "id": "disable-console" }])</script>
+  <script src="/js/cookieconsent.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://swalekh.blob.core.windows.net/swk-version/nic-dec-2024-build-swalekh-main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reverie-stt-sdk/dist/bundle.js"></script>
+  <script src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js" noModule=""></script>
+</head>
+
+<body>
+  <div class="fixed inset-0 bg-black bg-opacity-50 z-[998] hidden" aria-hidden="true"></div>
+  <div role="dialog" aria-labelledby="confirm-dialog-title" aria-describedby="confirm-dialog-description"
+    aria-modal="true"
+    class="fixed shadow top-1 rounded-md border w-[90svw] sm:w-[30rem] left-[50%] translate-x-[-50%] z-[9999] bg-white p-4 dark:bg-black hidden">
+    <p id="confirm-dialog-title" class="font-bold"> says</p>
+    <p id="confirm-dialog-description" class="text-sm"></p>
+    <div class="flex justify-end gap-4 mt-4"><button
+        class="bg-theme-primary text-white dark:text-black px-5 py-2 rounded-3xl">Okay</button><button
+        class="bg-theme-primary text-white dark:text-black px-5 py-2 rounded-3xl">Cancel</button></div>
+  </div>
+  <div class="fixed inset-0 bg-black bg-opacity-50 z-[998] hidden" aria-hidden="true"></div>
+  <div class="scroll-watcher"></div><!--$--><!--$-->
+  <header
+    class="bg-transparent py-4 header-background-transition fade-out top-0 fixed z-header-footer w-full header-initial-state !opacity-100">
+    <div class="flex flex-row   py-2 md:pt-4 sm:px-6 justify-end xl:justify-between headerLandingMenuContainer">
+      <div class="hidden  "><!--$-->
+        <div class=" w-full xl:hidden">
+          <div class=""><button title="Search" aria-label="Search"
+              class="p-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"> <svg stroke="currentColor" fill="none"
+                stroke-width="0" viewBox="0 0 24 24" class=" text-3xl  dark:!text-[yellow]  " height="1em" width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                  fill="currentColor"></path>
+              </svg></button>
+            <div class="fixed inset-0 z-[500] bg-black/80 transition-opacity hidden" style="opacity:0"></div>
+            <div class="fixed inset-0 z-[500] items-center justify-center transition-transform hidden"
+              style="opacity:0;transform:scale(0.95) translateZ(0)">
+              <div class="relative w-fit max-w-lg bg-white p-8 shadow-lg rounded-lg"><button
+                  class="absolute right-2 top-2 p-1 rounded-full focus:outline-none"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x h-6 w-6">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg><span class="sr-only">Close</span></button>
+                <div class=" py-6 flex flex-col gap-4">
+                  <h3 class=" text-sm font-bold content-dark-text-not-clickable">Search</h3>
+                  <div class="relative flex-grow p-0 m-0 searchbar"><input aria-label="Search  Data"
+                      title="Search - Entering data in the input field will suggest you search option to choose from"
+                      type="text" placeholder="Search Here" maxLength="250"
+                      class="indic-t13n w-[100%] focus:ring-2 ring-[#A7A7A7] border border-[#C1C7CD] py-2 relative rounded-lg pl-10 shadow bg-theme-gray placeholder:text-sm  "
+                      style="overflow:auto" /><svg stroke="currentColor" fill="none" stroke-width="0"
+                      viewBox="0 0 24 24" class="absolute text-2xl left-3 top-2.5 text-gray" height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                        fill="currentColor"></path>
+                    </svg></div>
+                  <div class="flex justify-between content-dark-text-not-clickable">
+                    <div class="text-sm font-bold">Area/ Topics</div>
+                    <div class=" text-sm">All</div>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Acts</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Citizen Engagements</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Directory</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Explore India</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Government Datasets</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Helplines</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">News</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Public Utilities</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Schemes</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Services</div>
+                    </div>
+                    <div
+                      class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                      <div class="text-[13px] text-neutral-600 ">Others</div>
+                    </div>
+                  </div><button title="Search"
+                    class="flex-shrink w-full px-8 py-2  text-white dark:text-[black] rounded-lg bg-theme-primary text-bold ">Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" 2xl:gap-2 w-full hidden xl:flex">
+          <div class="flex-shrink my-auto "></div>
+          <div class="relative flex-grow p-0 m-0 searchbar">
+            <div class="relative">
+              <div class="absolute top-[50%] translate-y-[-50%] left-0 z-[100] text-gray"></div><input
+                aria-label="Search  Data" autoComplete="off" type="text"
+                title="Search - Entering data in the input field will suggest you search option to choose from"
+                placeholder="Search Here" maxLength="250"
+                class="indic-t13n pl-[4.4rem] pr-[230px]  w-[100%] placeholder:text-[#767676] focus:ring-2 ring-[#A7A7A7] border border-[#C1C7CD] py-3 text-base relative dark:!text-white rounded-lg outline-none pl-[4.4rem] shadow bg-theme-gray dark:bg-black"
+                style="overflow:auto" />
+            </div><select aria-label="All Categories Dropdown"
+              class="border-l-2 px-2 py-2.5 absolute right-[1px]  text-sm h-full top-0 cursor-pointer text-gray font-bold bg-theme-gray min-w-fit bg-white dark:hover:bg-gray-800 text-gray rounded-r-lg text-[0.75rem] dark:text-[yellow]   custom-select 3xl:text-base custom-select">
+              <option class="text-sm" value="all" title="All Categories" aria-label="All Categories Dropdown Option">All
+                Categories</option>
+              <option class="text-sm" value="acts" title="Acts" aria-label="Acts Dropdown Option">Acts</option>
+              <option class="text-sm" value="citizenengagements" title="Citizen Engagements"
+                aria-label="Citizen Engagements Dropdown Option">Citizen Engagements</option>
+              <option class="text-sm" value="directory" title="Directory" aria-label="Directory Dropdown Option">
+                Directory</option>
+              <option class="text-sm" value="Explore India" title="Explore India"
+                aria-label="Explore India Dropdown Option">Explore India</option>
+              <option class="text-sm" value="governmentdatasets" title="Government Datasets"
+                aria-label="Government Datasets Dropdown Option">Government Datasets</option>
+              <option class="text-sm" value="helplines" title="Helplines" aria-label="Helplines Dropdown Option">
+                Helplines</option>
+              <option class="text-sm" value="news" title="News" aria-label="News Dropdown Option">News</option>
+              <option class="text-sm" value="publicutilities" title="Public Utilities"
+                aria-label="Public Utilities Dropdown Option">Public Utilities</option>
+              <option class="text-sm" value="schemes" title="Schemes" aria-label="Schemes Dropdown Option">Schemes
+              </option>
+              <option class="text-sm" value="services" title="Services" aria-label="Services Dropdown Option">Services
+              </option>
+              <option class="text-sm" value="others" title="Others" aria-label="Others Dropdown Option">Others</option>
+            </select>
+          </div><button title="Search"
+            class="flex-shrink dark:bg-[#FFFA43] dark:text-black px-8 py-2 ml-3 2xl:ml-4 mr-[-30px] text-theme-text-color rounded-lg bg-theme-primary text-base text-bold">Search</button>
+        </div><!--/$-->
+      </div>
+      <div class="right-section  ">
+        <div class="flex flex-row items-center justify-end">
+          <div class="hidden"><!--$-->
+            <div class=" w-full xl:hidden">
+              <div class=""><button title="Search" aria-label="Search"
+                  class="p-1.5 rounded-lg  hover:bg-[#2B2288] focus:bg-[#2B2288]"> <svg stroke="currentColor"
+                    fill="none" stroke-width="0" viewBox="0 0 24 24" class=" text-3xl  dark:!text-[yellow]  !text-white"
+                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                      fill="currentColor"></path>
+                  </svg></button>
+                <div class="fixed inset-0 z-[500] bg-black/80 transition-opacity hidden" style="opacity:0"></div>
+                <div class="fixed inset-0 z-[500] items-center justify-center transition-transform hidden"
+                  style="opacity:0;transform:scale(0.95) translateZ(0)">
+                  <div class="relative w-fit max-w-lg bg-white p-8 shadow-lg rounded-lg"><button
+                      class="absolute right-2 top-2 p-1 rounded-full focus:outline-none"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x h-6 w-6">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                      </svg><span class="sr-only">Close</span></button>
+                    <div class=" py-6 flex flex-col gap-4">
+                      <h3 class=" text-sm font-bold content-dark-text-not-clickable">Search</h3>
+                      <div class="relative flex-grow p-0 m-0 searchbar"><input aria-label="Search  Data"
+                          title="Search - Entering data in the input field will suggest you search option to choose from"
+                          type="text" placeholder="Search Here" maxLength="250"
+                          class="indic-t13n w-[100%] focus:ring-2 ring-[#A7A7A7] border border-[#C1C7CD] py-2 relative rounded-lg pl-10 shadow bg-theme-gray placeholder:text-sm  "
+                          style="overflow:auto" /><svg stroke="currentColor" fill="none" stroke-width="0"
+                          viewBox="0 0 24 24" class="absolute text-2xl left-3 top-2.5 text-gray" height="1em"
+                          width="1em" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+                            fill="currentColor"></path>
+                        </svg></div>
+                      <div class="flex justify-between content-dark-text-not-clickable">
+                        <div class="text-sm font-bold">Area/ Topics</div>
+                        <div class=" text-sm">All</div>
+                      </div>
+                      <div class="flex flex-wrap gap-2">
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Acts</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Citizen Engagements</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Directory</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Explore India</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Government Datasets</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Helplines</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">News</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Public Utilities</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Schemes</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Services</div>
+                        </div>
+                        <div
+                          class="p-2 dark:bg-[yellow] rounded-[31px] border border-neutral-600 border-opacity-30 bg-[white]">
+                          <div class="text-[13px] text-neutral-600 ">Others</div>
+                        </div>
+                      </div><button title="Search"
+                        class="flex-shrink w-full px-8 py-2  text-white dark:text-[black] rounded-lg bg-theme-primary text-bold ">Search</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" 2xl:gap-2 w-full hidden xl:flex">
+              <div class="flex-shrink my-auto "></div>
+              <div class="relative flex-grow p-0 m-0 searchbar">
+                <div class="relative">
+                  <div class="absolute top-[50%] translate-y-[-50%] left-0 z-[100] text-gray"></div><input
+                    aria-label="Search  Data" autoComplete="off" type="text"
+                    title="Search - Entering data in the input field will suggest you search option to choose from"
+                    placeholder="Search Here" maxLength="250"
+                    class="indic-t13n pl-[4.4rem] pr-[230px]  w-[100%] placeholder:text-[#767676] focus:ring-2 ring-[#A7A7A7] border border-[#C1C7CD] py-3 text-base relative dark:!text-white rounded-lg outline-none pl-[4.4rem] shadow bg-theme-gray dark:bg-black"
+                    style="overflow:auto" />
+                </div><select aria-label="All Categories Dropdown"
+                  class="border-l-2 px-2 py-2.5 absolute right-[1px]  text-sm h-full top-0 cursor-pointer text-gray font-bold bg-theme-gray min-w-fit bg-white dark:hover:bg-gray-800 text-gray rounded-r-lg text-[0.75rem] dark:text-[yellow]   custom-select 3xl:text-base custom-select">
+                  <option class="text-sm" value="all" title="All Categories"
+                    aria-label="All Categories Dropdown Option">All Categories</option>
+                  <option class="text-sm" value="acts" title="Acts" aria-label="Acts Dropdown Option">Acts</option>
+                  <option class="text-sm" value="citizenengagements" title="Citizen Engagements"
+                    aria-label="Citizen Engagements Dropdown Option">Citizen Engagements</option>
+                  <option class="text-sm" value="directory" title="Directory" aria-label="Directory Dropdown Option">
+                    Directory</option>
+                  <option class="text-sm" value="Explore India" title="Explore India"
+                    aria-label="Explore India Dropdown Option">Explore India</option>
+                  <option class="text-sm" value="governmentdatasets" title="Government Datasets"
+                    aria-label="Government Datasets Dropdown Option">Government Datasets</option>
+                  <option class="text-sm" value="helplines" title="Helplines" aria-label="Helplines Dropdown Option">
+                    Helplines</option>
+                  <option class="text-sm" value="news" title="News" aria-label="News Dropdown Option">News</option>
+                  <option class="text-sm" value="publicutilities" title="Public Utilities"
+                    aria-label="Public Utilities Dropdown Option">Public Utilities</option>
+                  <option class="text-sm" value="schemes" title="Schemes" aria-label="Schemes Dropdown Option">Schemes
+                  </option>
+                  <option class="text-sm" value="services" title="Services" aria-label="Services Dropdown Option">
+                    Services</option>
+                  <option class="text-sm" value="others" title="Others" aria-label="Others Dropdown Option">Others
+                  </option>
+                </select>
+              </div><button title="Search"
+                class="flex-shrink dark:bg-[#FFFA43] dark:text-black px-8 py-2 ml-3 2xl:ml-4 mr-[-30px] text-theme-text-color rounded-lg bg-theme-primary text-base text-bold">Search</button>
+            </div><!--/$-->
+          </div><span anuvadak-no-localization="true"
+            class="hidden md:block  hidden-pipe dark:!text-white xl:hidden text-white" aria-hidden="true">|</span>
+          <div><!--$-->
+            <div class="right-menu-landing-page group-container">
+              <div class="hidden md:block dark:text-yellow"><button
+                  class="group-item text-base font-normal cursor-pointer dark:!text-[yellow] text-white p-1.5 rounded-lg p-1.5 rounded-lg hover:bg-[#2B2288] focus:bg-[#2B2288]"
+                  aria-labelledby="skip-label" title="Skip to main content"><span id="skip-label"
+                    class="hidden 2xl:block text-sm">Skip to main content</span><svg stroke="currentColor" fill="none"
+                    stroke-width="0" viewBox="0 0 24 24" class="2xl:hidden h-7 w-6 m-0 p-0 dark:text-[yellow]"
+                    role="presentation" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.17154 16.8182L7.75732 18.2324L12 22.475L16.2426 18.2324L14.8284 16.8182L12 19.6466L9.17154 16.8182Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M14.8284 7.182L16.2426 5.76779L12 1.52515L7.75733 5.76779L9.17155 7.182L12 4.35357L14.8284 7.182Z"
+                      fill="currentColor"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 9.00018C13.6569 9.00018 15 10.3433 15 12.0002C15 13.657 13.6569 15.0002 12 15.0002C10.3431 15.0002 9 13.657 9 12.0002C9 10.3433 10.3431 9.00018 12 9.00018ZM12 11.0002C12.5523 11.0002 13 11.4479 13 12.0002C13 12.5525 12.5523 13.0002 12 13.0002C11.4477 13.0002 11 12.5525 11 12.0002C11 11.4479 11.4477 11.0002 12 11.0002Z"
+                      fill="currentColor"></path>
+                  </svg></button></div><span class="hidden md:block  hidden-pipe dark:!text-white" aria-hidden="true"
+                anuvadak-no-localization="true">|</span>
+              <div class="relative"><button title="Calendar Widget" aria-label="Calendar Widget"
+                  class="cursor-pointer group-item hidden md:flex  items-center p-1.5 pr-0 sm:pr-1.5 rounded-lg hover:bg-[#2B2288] focus:bg-[#2B2288] ">
+                  <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                      class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                      viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"></path>
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"></path>
+                    </svg><span class="sr-only">Loading...</span></div>
+                </button>
+                <div role="dialog" aria-label="calendar"
+                  class="border shadow absolute !z-[999] bg-white p-4 rounded-md dark:bg-[#121212] hidden w-[20rem] md:w-[23rem] left-[50%] translate-x-[-50%] mt-2 calendar-widget rounded bg-white flex flex-col gap-2 md:gap-4 p-4 theme-box-shadow dark:bg-charcoal_gray ">
+                  <div class="flex w-full justify-end"><button title="Close"
+                      class="p-0.5 transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 rounded-full border hover:border-gray-700"
+                      aria-label="Close"><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15"
+                        class="size-3" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+                          fill="currentColor"></path>
+                      </svg></button></div>
+                  <div class="flex flex-col gap-3" aria-label="calendar">
+                    <div class="calendar-header">
+                      <div class="flex flex-row gap-4 items-center justify-between">
+                        <div aria-label="Current Year is 2025 and month is October" class="flex gap-2">
+                          <h2 class="font-bold text-base dark:text-white" aria-live="polite"><span
+                              class="sr-only">Current year text/heading, </span>2025</h2>
+                          <h2 class="font-bold text-base dark:text-white" aria-label="Current month, October">October
+                          </h2>
+                        </div>
+                        <div class="flex flex-row gap-1">
+                          <div tabindex="0">
+                            <div class="relative ">
+                              <div
+                                class="inline-block  group content-dark-text-clickable hover:text-blue-500 hover:outline hover:outline-1 hover:outline-blue-500 p-1"
+                                aria-label="Navigate to Previous Month"><svg stroke="currentColor" fill="currentColor"
+                                  stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                  <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                          <div tabindex="0">
+                            <div class="relative ">
+                              <div
+                                class="inline-block  group content-dark-text-clickable hover:text-blue-500 hover:outline hover:outline-1 hover:outline-blue-500 p-1"
+                                aria-label="Navigate to Next Month"><svg stroke="currentColor" fill="currentColor"
+                                  stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                                </svg></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calendar-body">
+                      <div class="w-full xl:max-w-[580px]" aria-label="calendar-days">
+                        <table
+                          class="w-full border-collapse border-separate border-spacing-1 md:border-spacing-2 -mt-4 border-[red]">
+                          <thead>
+                            <tr role="row">
+                              <th aria-label="Sunday"
+                                class="bg-[#2B6FA8] px-1 py-1 text-center text-gray-100 text-[0.625rem] dark:bg-[#121212]">
+                                SUN</th>
+                              <th aria-label="Monday"
+                                class="bg-[#2B6FA8] px-1 py-1 text-center text-gray-100 text-[0.625rem] dark:bg-[#121212]">
+                                MON</th>
+                              <th aria-label="Tuesday"
+                                class="bg-[#2B6FA8] px-1 py-1 text-center text-gray-100 text-[0.625rem] dark:bg-[#121212]">
+                                TUE</th>
+                              <th aria-label="Wednesday"
+                                class="bg-[#2B6FA8] px-1 py-1 text-center text-gray-100 text-[0.625rem] dark:bg-[#121212]">
+                                WED</th>
+                              <th aria-label="Thursday"
+                                class="bg-[#2B6FA8] px-1 py-1 text-center text-gray-100 text-[0.625rem] dark:bg-[#121212]">
+                                THU</th>
+                              <th aria-label="Friday"
+                                class="bg-[#2B6FA8] px-1 py-1 text-center text-gray-100 text-[0.625rem] dark:bg-[#121212]">
+                                FRI</th>
+                              <th aria-label="Saturday"
+                                class="bg-[#2B6FA8] px-1 py-1 text-center text-gray-100 text-[0.625rem] dark:bg-[#121212]">
+                                SAT</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div
+                      class="calendar_calendarNthChildBorder__we3zf max-w-[330px] max-h-[150px] overflow-y-auto common-scrollbar-style">
+                      <fieldset class="min-w-[325px]">
+                        <legend class="sr-only">Select a holiday</legend>
+                        <div class="max-h-[300px] overflow-y-auto pr-2 scroll-smooth"></div>
+                      </fieldset>
+                    </div>
+                    <div class="ml-auto"><a class="bg-[#FFE9E9] py-2 px-4 text-[0.6rem] dark:text-[yellow] dark-card"
+                        href="/calendar">View More</a></div>
+                  </div>
+                </div>
+              </div><span class="hidden md:block  hidden-pipe dark:!text-white" aria-hidden="true"
+                anuvadak-no-localization="true">|</span>
+              <div class=" flex justify-center items-center">
+                <div class="relative"><button title="Accessibility" aria-label="Accessibility"
+                    class="cursor-pointer group-item rounded-lg hover:bg-[#2B2288] focus:bg-[#2B2288] p-1 flex">
+                    <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                        class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                        viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                          fill="currentColor"></path>
+                        <path
+                          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                          fill="currentFill"></path>
+                      </svg><span class="sr-only">Loading...</span></div>
+                  </button>
+                  <div role="dialog"
+                    class="border shadow absolute !z-[999] bg-white p-4 rounded-md dark:bg-[#121212] hidden w-[280px] sm:w-[336px] sm:left-[50%] translate-x-[-50%]">
+                    <div class="flex w-full justify-end"><button title="Close"
+                        class="p-0.5 transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 rounded-full border hover:border-gray-700"
+                        aria-label="Close"><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15"
+                          class="size-3" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+                            fill="currentColor"></path>
+                        </svg></button></div>
+                    <h2 class="font-medium mb-[16px] dark:text-white text-[16px]">Accessibility Tools</h2>
+                    <h3 class="dark:text-white text-[16px]">Color Adjustment</h3>
+                    <div class="h-[1px] bg-black dark:bg-white"></div>
+                    <ul class="grid grid-cols-3 gap-[16px] p-[8px]">
+                      <li><button
+                          class=" border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                            class="min-h-[20px] min-w-[20px] sm:min-h-[24px] sm:min-w-[24px] " height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+                            </path>
+                          </svg>Dark Contrast</button></li>
+                      <li><button
+                          class="border-theme-primary border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            class="min-h-[20px] min-w-[20px] sm:min-h-[24px] sm:min-w-[24px]" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11Zm-5.657.157a.75.75 0 0 1 0 1.06l-1.768 1.768a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.767-1.768a.75.75 0 0 1 1.061 0ZM3.515 3.515a.75.75 0 0 1 1.06 0l1.768 1.768a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L3.515 4.575a.75.75 0 0 1 0-1.06ZM12 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 12 0ZM4 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 4 12Zm8 8a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5A.75.75 0 0 1 12 20Zm12-8a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 24 12Zm-6.343 5.657a.75.75 0 0 1 1.06 0l1.768 1.768a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.768-1.767a.75.75 0 0 1 0-1.061Zm2.828-14.142a.75.75 0 0 1 0 1.06l-1.768 1.768a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l1.767-1.768a.75.75 0 0 1 1.061 0Z">
+                            </path>
+                          </svg>Normal</button></li>
+                    </ul>
+                    <h3 class="dark:text-white">Text Size</h3>
+                    <div class="h-[1px] bg-black dark:bg-white"></div>
+                    <ul class="grid grid-cols-3 gap-[16px] p-[8px]" style="grid-auto-rows:1fr;grid-auto-columns:1fr">
+                      <li><button
+                          class=" border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M6 17.59L7.41 19 12 14.42 16.59 19 18 17.59l-6-6z"></path>
+                            <path d="M6 11l1.41 1.41L12 7.83l4.59 4.58L18 11l-6-6z"></path>
+                          </svg>Increase Text</button></li>
+                      <li><button
+                          class="border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M18 6.41L16.59 5 12 9.58 7.41 5 6 6.41l6 6z"></path>
+                            <path d="M18 13l-1.41-1.41L12 16.17l-4.59-4.58L6 13l6 6z"></path>
+                          </svg>Decrease Text</button></li>
+                      <li><button
+                          class="border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke-width="2"
+                              d="M20,8 C18.5974037,5.04031171 15.536972,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 L12,21 C16.9705627,21 21,16.9705627 21,12 M21,3 L21,9 L15,9">
+                            </path>
+                          </svg>Reset Text</button></li>
+                      <li><button
+                          class="  border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                            class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M920 416H616c-4.4 0-8 3.6-8 8v112c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-56h60v320h-46c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h164c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8h-46V480h60v56c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V424c0-4.4-3.6-8-8-8zM656 296V168c0-4.4-3.6-8-8-8H104c-4.4 0-8 3.6-8 8v128c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-64h168v560h-92c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h264c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-92V232h168v64c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8z">
+                            </path>
+                          </svg>Text<!-- --> Spacing</button></li>
+                      <li><button
+                          class="  border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M11 4H21V6H11V4ZM6 7V11H4V7H1L5 3L9 7H6ZM6 17H9L5 21L1 17H4V13H6V17ZM11 18H21V20H11V18ZM9 11H21V13H9V11Z">
+                            </path>
+                          </svg>Line<!-- --> Height</button></li>
+                    </ul>
+                    <h3 class="dark:text-white">Others</h3>
+                    <div class="h-[1px] bg-black dark:bg-white"></div>
+                    <ul class="grid grid-cols-3 gap-[16px] p-[8px]" style="grid-auto-rows:1fr;grid-auto-columns:1fr">
+                      <li><button
+                          class=" border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                            class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Image_Off">
+                              <path
+                                d="M19.937,14.218l0,-8.654c0,-0.829 -0.672,-1.5 -1.5,-1.5l-10.628,-0c-0.276,-0 -0.5,-0.225 -0.5,-0.5c0,-0.276 0.224,-0.5 0.5,-0.5l10.628,-0c1.38,-0 2.5,1.118 2.5,2.5l0,10.624c0,0.276 -0.224,0.5 -0.5,0.501c-0.276,-0 -0.5,-0.225 -0.5,-0.5l0,-0.556l-4.583,-4.584c-0.456,-0.456 0.251,-1.163 0.707,-0.707c0.162,0.162 2.37,2.37 3.876,3.876Zm-0.121,6.304c-0.395,0.262 -0.869,0.415 -1.379,0.415l-12.874,-0c-1.381,-0 -2.5,-1.119 -2.5,-2.5l0,-12.873c0,-0.51 0.153,-0.984 0.414,-1.38l-0.263,-0.263c-0.456,-0.456 0.251,-1.163 0.707,-0.707c0.088,0.088 0.176,0.176 0.263,0.263c0.245,0.245 16.095,16.094 16.339,16.338l0.263,0.263c0.455,0.456 -0.252,1.163 -0.707,0.707c-0.088,-0.087 -0.175,-0.175 -0.263,-0.263Zm-11.104,-11.103l-2.001,-2.001c-0.094,0.196 -0.146,0.415 -0.146,0.647c-0,0.829 0.672,1.5 1.5,1.5c0.232,-0 0.451,-0.052 0.647,-0.146Zm-2.733,-2.733l-1.77,-1.77c-0.093,0.196 -0.146,0.416 -0.146,0.648l0,10.717l1.926,-1.926c0.587,-0.586 1.536,-0.586 2.122,-0l0.555,0.554c0.195,0.196 0.511,0.196 0.706,0l2.415,-2.415l-2.343,-2.343c-0.395,0.262 -0.869,0.414 -1.379,0.414c-1.38,-0 -2.5,-1.119 -2.5,-2.5c-0,-0.509 0.152,-0.983 0.414,-1.379Zm-1.916,11.009l0,0.741c0,0.829 0.671,1.5 1.5,1.5l12.874,0c0.232,0 0.451,-0.052 0.647,-0.145c-0.165,-0.165 -3.264,-3.263 -6.59,-6.59l-2.414,2.415c-0.585,0.586 -1.537,0.586 -2.122,0l-0.554,-0.554c-0.195,-0.196 -0.512,-0.196 -0.708,0l-2.633,2.633Z">
+                              </path>
+                            </g>
+                          </svg>Hide<!-- --> Images</button></li>
+                      <li><button tabindex="0"
+                          class=" border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
+                            aria-hidden="true" class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                              d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
+                              clip-rule="evenodd"></path>
+                          </svg>Big<!-- --> Cursor</button></li>
+                      <li><a
+                          class="border rounded-md dark:bg-[#121212] hover:bg-[#F7F7F7] dark:hover:bg-black cursor-pointer flex flex-col justify-center items-center gap-[4px] sm:gap-[8px] py-[4px] sm:py-[8px] px-[2px] sm:px-[4px] text-center w-[70px] h-[70px] sm:w-[96px] sm:h-[96px] text-[12px] sm:text-[14px] content-dark-text-clickable"
+                          href="/help"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 512 512" class="h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M232 416a23.88 23.88 0 01-14.2-4.68 8.27 8.27 0 01-.66-.51L125.76 336H56a24 24 0 01-24-24V200a24 24 0 0124-24h69.75l91.37-74.81a8.27 8.27 0 01.66-.51A24 24 0 01256 120v272a24 24 0 01-24 24zm-106.18-80zm-.27-159.86zM320 336a16 16 0 01-14.29-23.19c9.49-18.87 14.3-38 14.3-56.81 0-19.38-4.66-37.94-14.25-56.73a16 16 0 0128.5-14.54C346.19 208.12 352 231.44 352 256c0 23.86-6 47.81-17.7 71.19A16 16 0 01320 336z">
+                            </path>
+                            <path
+                              d="M368 384a16 16 0 01-13.86-24C373.05 327.09 384 299.51 384 256c0-44.17-10.93-71.56-29.82-103.94a16 16 0 0127.64-16.12C402.92 172.11 416 204.81 416 256c0 50.43-13.06 83.29-34.13 120a16 16 0 01-13.87 8z">
+                            </path>
+                            <path
+                              d="M416 432a16 16 0 01-13.39-24.74C429.85 365.47 448 323.76 448 256c0-66.5-18.18-108.62-45.49-151.39a16 16 0 1127-17.22C459.81 134.89 480 181.74 480 256c0 64.75-14.66 113.63-50.6 168.74A16 16 0 01416 432z">
+                            </path>
+                          </svg>Screen Reader</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><span class="hidden md:block  hidden-pipe dark:!text-white" aria-hidden="true"
+                anuvadak-no-localization="true">|</span>
+              <div
+                class=" relative flex items-center min-w-8 max-w-8 justify-center min-h-6  rounded-lg hover:bg-[#2B2288]  ">
+              </div><span class="hidden md:block  hidden-pipe dark:!text-white" aria-hidden="true"
+                anuvadak-no-localization="true">|</span>
+              <div>
+                <div class="xl:hidden flex items-center"><button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] bg-primary text-primary-foreground hover:bg-primary/90 px-6 2xl:px-10 py-1 2xl:py-2 border-none w-[55px] group-item"
+                    aria-label="menu-button" type="button" aria-haspopup="dialog" aria-expanded="false"
+                    aria-controls="radix-:R6firda:" data-state="closed">
+                    <div class="flex h-[22px] flex-col justify-between cursor-pointer  "><span
+                        class="h-[3px] w-[32px] bg-[#F15B25]"></span><span
+                        class="h-[3px] w-[32px]  bg-[#D9D9D9]"></span><span
+                        class="h-[3px] w-[32px] bg-[#006934]"></span></div>
+                  </button></div>
+                <div class="hidden xl:block">
+                  <div class="relative z-[1]">
+                    <div class="relative"><button title="Menu Bar" aria-label="Menu Bar"
+                        class="cursor-pointer group-item p-1 rounded-lg hover:bg-[#2B2288] focus:bg-[#2B2288]">
+                        <div class="Menu_flag_Menu_Bar_container__Sgufl cursor-pointer Menu_visible__Kf4XO"><span
+                            class="Menu_line1__G_NXD bg-[#F15B25] dark:bg-[yellow]"></span><span
+                            class="Menu_line2__smQyT bg-[#D9D9D9] dark:bg-[yellow]"></span><span
+                            class="Menu_line3__aq3ev bg-[#046A38] dark:bg-[yellow]"></span></div>
+                        <div
+                          class="Menu_flag_Image_Container__CUpeU cursor-pointer w-[56px] h-[44px] dark:!bg-transparent Menu_hidden__3hKHw">
+                          <img class="cursor-pointer pointer-events-auto" src="/image/icons/Group 145.svg"
+                            alt="flagImage" /></div>
+                      </button>
+                      <div role="dialog"
+                        class="border shadow absolute !z-[999] bg-white p-4 rounded-md dark:bg-[#121212] hidden right-0 mt-1">
+                        <div class="flex w-full justify-end"><button title="Close"
+                            class="p-0.5 transition-all text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 rounded-full border hover:border-gray-700"
+                            aria-label="Close"><svg stroke="currentColor" fill="none" stroke-width="0"
+                              viewBox="0 0 15 15" class="size-3" height="1em" width="1em"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+                                fill="currentColor"></path>
+                            </svg></button></div>
+                        <div
+                          class="py-10 
+           w-[83svw] xl:w-[61.5svw]  hidden lg:grid   grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-2  bg-white dark:bg-[#121212]  ">
+                          <ul class="menu "></ul>
+                          <ul class="menu">
+                            <div class="h-7"></div>
+                          </ul>
+                          <ul class="menu"></ul>
+                          <ul class="menu"></ul>
+                          <ul class="menu"></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!--/$-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header><!--/$-->
+  <div class="fixed right-0 top-[50%] transform -translate-y-[50%] flex flex-col gap-1 z-[100]  items-end layout-icons">
+    <div>
+      <div><button title="Translation Feedback" class="Btn  dark:bg-[#121212] dark:hover:bg-[#121212]">
+          <div class="p-[0.5em] pl-[0.75rem]">
+            <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary" viewBox="0 0 100 101"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentFill"></path>
+              </svg><span class="sr-only">Loading...</span></div>
+          </div>
+          <div class="text dark:!text-[yellow] ">Translation Feedback</div>
+        </button></div>
+    </div>
+    <div>
+      <div><a title="CPGRAMS" role="link" class="Btn dark:bg-[#121212] dark:hover:bg-[#121212]"
+          href="https://pgportal.gov.in/">
+          <div class="p-[0.5em] pl-[0.75rem]">
+            <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary" viewBox="0 0 100 101"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentFill"></path>
+              </svg><span class="sr-only">Loading...</span></div>
+          </div>
+          <div class="text dark:!text-[yellow]">CPGRAMS</div>
+        </a></div>
+    </div>
+    <div>
+      <div><a title="Calender" role="button" class="Btn dark:bg-[#121212] dark:hover:bg-[#121212]" href="/calendar">
+          <div class="p-[0.5em] pl-[0.75rem]" title="Calender Icon">
+            <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary" viewBox="0 0 100 101"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentFill"></path>
+              </svg><span class="sr-only">Loading...</span></div>
+          </div>
+          <div class="text dark:!text-[yellow]">Calendar</div>
+        </a></div>
+    </div>
+    <div>
+      <div><button title="Share" class="group Btn dark:bg-[#121212] dark:hover:bg-[#121212] " type="button"
+          id="radix-:R2krda:" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+          <div class="p-[0.5em] pl-[0.75rem]">
+            <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary" viewBox="0 0 100 101"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentFill"></path>
+              </svg><span class="sr-only">Loading...</span></div>
+          </div>
+          <div class="text dark:!text-[yellow]">Share</div>
+        </button></div>
+    </div>
+    <div>
+      <div><button role="button" aria-label="Color" title="Color"
+          class="group Btn dark:bg-[#121212] dark:hover:bg-[#121212]" type="button" id="radix-:R34rda:"
+          aria-haspopup="menu" aria-expanded="false" data-state="closed">
+          <div class="p-[0.5em] pl-[0.75rem]"><span class="sr-only">Colour</span>
+            <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary" viewBox="0 0 100 101"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                  fill="currentFill"></path>
+              </svg><span class="sr-only">Loading...</span></div>
+          </div>
+          <div class="text dark:!text-[yellow]">Color</div>
+        </button></div>
+    </div>
+  </div><!--$?--><template id="B:0"></template>
+  <div class="min-h-[100svh] ">
+    <div
+      class="fixed z-[100] min-w-[100svw] min-h-[100svh] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-black/30 !backdrop-blur-sm">
+    </div>
+    <div class=" fixed z-[101] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
+      <div id="hourglass_container__IXVvW"><label class="hourglass_loading_title__5e9kI">Loading ...</label><span
+          class="hourglass_loading_circle__RYCiQ hourglass_sp1__yx7wp"><span
+            class="hourglass_loading_circle__RYCiQ hourglass_sp2__xe0uE"><span
+              class="hourglass_loading_circle__RYCiQ hourglass_sp3__8VPmY"></span></span></span></div>
+    </div>
+  </div><!--/$--><!--/$-->
+  <div></div>
+  <footer id="main-footer" class="footer bg-[var(--vampire-black)] relative zz-header-footer z-[59]"
+    aria-label="site footer">
+    <div class="footer-top"></div>
+    <div class="mx-[8.5svw] h-px border border-neutral-500"></div>
+    <div class="flex justify-center my-2 sm:my-4  md:hidden mx-[8.5svw]">
+      <div class="w-full flex flex-col gap-0.5 sm:gap-6" data-orientation="vertical">
+        <div data-state="closed" data-orientation="vertical">
+          <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button"
+              aria-controls="radix-:R15tda:" aria-expanded="false" data-state="closed" data-orientation="vertical"
+              id="radix-:R5tda:"
+              class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 h-4 text-white"
+              data-radix-collection-item=""><span class="sr-only">Toggle FAQ Section</span>
+              <ul></ul><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button></h3>
+          <div data-state="closed" id="radix-:R15tda:" hidden="" role="region" aria-labelledby="radix-:R5tda:"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+          </div>
+        </div>
+        <div data-state="closed" data-orientation="vertical">
+          <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button"
+              aria-controls="radix-:R19tda:" aria-expanded="false" data-state="closed" data-orientation="vertical"
+              id="radix-:R9tda:"
+              class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 h-4 text-white"
+              data-radix-collection-item=""><span class="sr-only">Toggle FAQ Section</span>
+              <ul></ul><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button></h3>
+          <div data-state="closed" id="radix-:R19tda:" hidden="" role="region" aria-labelledby="radix-:R9tda:"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+          </div>
+        </div>
+        <div data-state="closed" data-orientation="vertical">
+          <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button"
+              aria-controls="radix-:R1dtda:" aria-expanded="false" data-state="closed" data-orientation="vertical"
+              id="radix-:Rdtda:"
+              class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 h-4 text-white"
+              data-radix-collection-item=""><span class="sr-only">Toggle FAQ Section</span>
+              <ul></ul><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button></h3>
+          <div data-state="closed" id="radix-:R1dtda:" hidden="" role="region" aria-labelledby="radix-:Rdtda:"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+          </div>
+        </div>
+        <div data-state="closed" data-orientation="vertical">
+          <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button"
+              aria-controls="radix-:R1htda:" aria-expanded="false" data-state="closed" data-orientation="vertical"
+              id="radix-:Rhtda:"
+              class="flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 h-4 text-white"
+              data-radix-collection-item=""><span class="sr-only">Toggle FAQ Section</span>
+              <ul></ul><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button></h3>
+          <div data-state="closed" id="radix-:R1htda:" hidden="" role="region" aria-labelledby="radix-:Rhtda:"
+            data-orientation="vertical"
+            class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+            style="--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-collapsible-content-width)">
+          </div>
+        </div>
+        <div class="flex  justify-between">
+          <div>
+            <ul class="flex flex-col gap-0.5 sm:gap-6"></ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-0.5 sm:gap-6">
+              <li title="Content Sources" class="footer-heading block lg:hidden"><a
+                  href="/about-us#data-sources">Content Sources</a></li>
+              <li title="India Portal 2.0 Brochure (Beta Version)" class="footer-heading block lg:hidden"><a
+                  class="text-ellipsis max-w-[16ch] overflow-hidden whitespace-nowrap block"
+                  href="/india-portal-brochure">India Portal 2.0 Brochure (Beta Version)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center  flex-col footer-margin-inline p-4 sm:py-10  gap-[10.2rem] xl:flex-row">
+      <div class="hidden  md:flex gap-8 justify-center xxl:gap-8 3xl:gap-24">
+        <ul class="footer-menu"></ul>
+        <ul class="footer-menu">
+          <li class="h-[2.125rem] " role="none"></li>
+        </ul>
+        <ul class="footer-menu"></ul>
+        <ul class="footer-menu"></ul>
+        <ul class="footer-menu"></ul>
+        <ul class="footer-menu">
+          <li title="Content Sources" class="footer-heading"><a href="/about-us#data-sources">Content Sources</a></li>
+          <li title="India Portal 2.0 Brochure (Beta Version)" class="footer-heading"><a
+              href="/india-portal-brochure">India Portal 2.0 Brochure (Beta Version)</a></li>
+        </ul>
+      </div>
+      <div class="flex justify-center xl:justify-start flex-wrap sm:flex-row gap-2 md:gap-6 xl:flex-col ">
+        <div class=" flex-col gap-3 hidden md:flex">
+          <p class="text-start text-white text-lg font-semibold text-nowrap">View on Mobile</p>
+          <div class="">
+            <div><img class="aspect-square w-full  sm:max-w-full" src="/image/appQR.svg"
+                title="Scan QR to View on Mobile" alt="Scan QR to View on Mobile" /></div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between items-start gap-3 ">
+          <p class="text-white text-sm sm:text-lg font-semibold  ">Follow Us</p>
+          <div class="flex flex-row items-center gap-2 ">
+            <ul class="flex flex-row gap-2">
+              <li class=" bg-[var(--footer-logo)] rounded-[50%] hover:bg-white "><a title="Find us on Facebook"
+                  href="https://www.facebook.com/nationalportalofindia">
+                  <div class="p-2 list-none footer-social-icons"><svg stroke="currentColor" fill="currentColor"
+                      stroke-width="0" version="1.1" viewBox="0 0 16 16" class="footer-social-facebook" height="23.58"
+                      width="23.58" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z">
+                      </path>
+                    </svg></div>
+                </a></li>
+              <li class=" bg-[var(--footer-logo)] rounded-[50%] hover:bg-white "><a title="Find us on X"
+                  href="https://x.com/indiagovin">
+                  <div class="p-2 list-none footer-social-icons"><svg stroke="currentColor" fill="currentColor"
+                      stroke-width="0" viewBox="0 0 512 512" class="footer-social-twitter" height="23.58" width="23.58"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                      </path>
+                    </svg></div>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer class="footer relative zz-header-footer z-[59]" role="contentinfo"><a class=" block w-full bg-[#0f1b36]"
+      href="/disclaimer">
+      <div class="flex flex-col sm:flex-row items-center  w-full sm:w-[80vw] h-full mx-auto gap-4 p-2 sm:p-0">
+        <div class="bg-[#13295a] h-full flex flex-col w-fit p-4"><span
+            class="text-white font-bold mb-1">Translation</span><span class="text-white font-bold">Disclaimer</span>
+        </div>
+        <p class="text-slate-400 sm:text-base text-sm">Translations of the content into languages other than English are
+          generated using automated tools and may not always be accurate. These translations are provided for
+          informational purposes only and should not be considered authoritative.</p>
+      </div>
+    </a>
+    <div class="footer-nic ">
+      <div class="flex justify-center gap-3">
+        <div class="flex gap-3 items-center flex-col sm:flex-row">
+          <div class="flex-none"><img alt="Logo of National Informatics Centre (NIC)" role="img" loading="lazy"
+              width="150" height="41" decoding="async" data-nimg="1" style="color:transparent"
+              srcSet="/_next/image?url=%2Fimage%2Ficons%2FNIC_logo%201.png&amp;w=256&amp;q=75 1x, /_next/image?url=%2Fimage%2Ficons%2FNIC_logo%201.png&amp;w=384&amp;q=75 2x"
+              src="/_next/image?url=%2Fimage%2Ficons%2FNIC_logo%201.png&amp;w=384&amp;q=75" /><span
+              class="sr-only">National Informatics Centre (NIC) logo</span></div>
+          <p class="text-sm text-gray-300 text-center sm:text-left sm:max-w-[123ch] dark:text-white">India Portal is
+            developed under the Digital India Programme to provide citizens with open and easy access to information. It
+            is designed, developed, and maintained by the National Informatics Centre (NIC), under the Ministry of
+            Electronics &amp; Information Technology, Government of India. The content available on India Portal is
+            owned and managed by the respective Ministries and Departments.</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="text-gray-300 dark:text-white z-versioning text-sm mt-4 flex flex-wrap justify-center gap-1">
+          <div>Last reviewed and updated on </div>
+          <div class="flex gap-1">
+            <div>08</div>
+            <div>October</div>
+            <div>2025</div>
+            <div>at</div>
+            <div>11:27:32</div>
+            <div>am</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div hidden id="S:0">
+    <main role="main">
+      <div class=" floatingBackToTopButton_scroll_To_Top_Button__SA92q floatingBackToTopButton_fade_in__cYEYT hidden ">
+        <div tabindex="0" role="button" class="floatingBackToTopButton_Btn__RDjEA">
+          <div class="floatingBackToTopButton_sign__mwDg9"><svg stroke="currentColor" fill="currentColor"
+              stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+              </path>
+            </svg></div>
+          <div class="floatingBackToTopButton_text__Bmwhs">Scroll</div>
+        </div>
+      </div>
+      <header class="">
+        <div class="relative landing-header">
+          <div class="landing-container">
+            <div class="flex justify-center mt-[5rem] sm:mt-[6rem]  sm:h-[222px]  "><img
+                class="scale-125 sm:w-[282px] w-[170px]" src="/image/icons/npi_logo.webp"
+                alt="National Portal of India" /></div>
+            <div class="flex flex-col items-center justify-center gap-2 mx-auto mt-4 ">
+              <p class="text-white text-xs sm:text-xl mt-3 sm:mt-6 ">Where Government Information Converges</p>
+              <div
+                class="relative h-[2.5rem] sm:h-auto rounded-lg flex  w-[70vw] sm:w-[35rem]   md:w-[43rem] lg:w-[50.313rem] xl:w-[60.313rem] mt-1 sm:mt-3">
+                <input tabindex="0" maxLength="250" title="Search Here" autoComplete="off" id="topbar-input"
+                  placeholder="Search for"
+                  aria-label="Search - Entering data in the input field will update the search results below"
+                  type="text"
+                  class="indic-t13n w-[100%] dark:placeholder:text-[#737373] placeholder:text-[0.65rem] dark:text-white  dark:border-gray-800 py-2 relative pl-4  bg-theme-gray dark:bg-black text-gray-950 sm:py-6 sm:pl-[4.4rem] md:placeholder:text-[0.95rem] rounded-lg rounded-r-none outline-none focus:outline-2 focus:outline-black" /><select
+                  aria-label="All Categories Dropdown" title="Global Search Filter"
+                  class=" custom-select  h-full relative border-l-2 px-4 py-4 sm:py-[1.4rem] max-w-[4ch] sm:max-w-[18ch] bg-[#F2F4F8] dark:bg-[#121212]  dark:hover:bg-[#121212]  cursor-pointer text-gray rounded-r-lg text-[0.75rem] dark:text-[yellow]  md:text-[1rem]  dark:border-black custom-select  ">
+                  <option title="All Categories" value="All Categoires" class="text-xs py-2 ">All Categories</option>
+                  <option value="acts" title="Acts" class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">
+                    Acts</option>
+                  <option value="citizenengagements" title="Citizen Engagements"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Citizen Engagements</option>
+                  <option value="directory" title="Directory"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Directory</option>
+                  <option value="Explore India" title="Explore India"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Explore India</option>
+                  <option value="governmentdatasets" title="Government Datasets"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Government Datasets</option>
+                  <option value="helplines" title="Helplines"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Helplines</option>
+                  <option value="news" title="News" class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">
+                    News</option>
+                  <option value="publicutilities" title="Public Utilities"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Public Utilities</option>
+                  <option value="schemes" title="Schemes"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Schemes</option>
+                  <option value="services" title="Services"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Services</option>
+                  <option value="others" title="Others"
+                    class="text-xs py-2 leading-5 dark:bg-[#121212] dark:text-[yellow]">Others</option>
+                </select>
+                <div class="absolute left-0 top-[50%] translate-y-[-50%] text-black">
+                  <div style="display:block"></div>
+                  <div style="display:none" class="relative">
+                    <div class="inline-block group"></div>
+                    <div role="tooltip"
+                      class="hidden 2xl:flex shadow-[0px_0px_12px_1px_rgba(251,247,120,0.9)] right-full translate-y-[-50%] top-[50%] mr-7 z-[10] justify-center items-center bg-black/70 dark:bg-black dark:text-black text-white p-3 rounded-md absolute">
+                      <span style="display:block"
+                        class="whitespace-nowrap text-center text-[#ffd714] text-base font-bold">Change Input to
+                        Keyboard</span><span style="display:none"
+                        class="whitespace-nowrap text-center text-[#ffd714] text-base font-bold">Change Input to
+                        Phonetic</span>
+                      <div
+                        class="dark:bg-black absolute right-[-5px] w-[10px] h-[10px] bg-black/70 transform rotate-45">
+                      </div>
+                    </div>
+                  </div>
+                </div><button title="Search Button"
+                  class="ml-2 bg-theme-primary dark:bg-[#FFFA43] dark:text-black text-theme-text-color  rounded-lg flex-shrink text-sm sm:text-xl px-2  sm:px-0 max-w-[164px] max-h-[72px] sm:h-full sm:w-full">Search</button>
+              </div>
+              <div class="flex w-full justify-start"></div>
+              <div class="flex flex-row justify-center text-[0.75rem] items-center my-1 sm:mt-4 gap-2 sm:text-[1rem]">
+                <div title="Trending Searches" class="whitespace-nowrap dark:text-white text-sm sm:text-base">Trending
+                  Searches :</div>
+                <ul
+                  class="flex max-w-[50vw] justify-start sm:w-[50vw] lg:w-auto  overflow-auto no-scrollbar gap-2 lg:justify-center items-center sm:max-w-[65vw]">
+                  <li> <button title="Apply Aadhaar" class="search-pills">Apply Aadhaar</button></li>
+                  <li> <button title="DigiLocker" class="search-pills">DigiLocker</button></li>
+                  <li> <button title="New Voter Registration" class="search-pills">New Voter Registration</button></li>
+                  <li> <button title=" Tatkaal Passport Service" class="search-pills"> Tatkaal Passport Service</button>
+                  </li>
+                  <li> <button title="Apply for Driving Licence" class="search-pills">Apply for Driving Licence</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class=" bg-[#F2F2F8] dark:bg-[#121212]  -mb-10  ">
+        <ul
+          class="flex flex-row rounded-lg justify-start px-10 3xl:justify-center gap-12 bg-white  py-5 max-w-[93svw] lg:max-w-[82.5svw] mx-auto -translate-y-1/2 theme-box-shadow overflow-x-scroll no-scrollbar snap-x snap-mandatory ">
+        </ul>
+      </div>
+      <div id="content" tabindex="-1" class=" bg-[#F2F2F8]  dark:bg-black  flex justify-center ">
+        <div class="flex flex-col w-full max-w-[100vw] section-padding !px-0 !pb-0 md:flex-row lg:max-w-[82.5vw]">
+          <div
+            class="dark:border dark:border-[#333]  flex-[1] bg-theme-primary dark:bg-[#121212] md:bg-white text-white px-4  py-4 2xl:px-10 2xl:py-6">
+            <div class="flex flex-row gap-5 items-center justify-center sm:justify-start">
+              <h1
+                class="psuedo-text-underline-white mb-6 lg:mb-4 text-theme-text-color after:bg-[var(--primary-text-color)]">
+                Online Services</h1>
+            </div>
+            <ul class="2xl:mt-4 flex flex-row gap-2 sm:gap-4 list-none"></ul>
+            <div
+              class="flex-[1] bg-theme-primary dark:bg-[#121212] md:bg-white sm:dark:bg-[#121212] py-4 px-4 flex md:hidden gap-3 flex-col sm:flex-row sm:shadow overflow-hidden">
+              <div aria-live="polite" class="w-full relative bg-theme-primary dark:bg-[#121212] my-auto md:bg-white"
+                role="region" aria-roledescription="carousel">
+                <div role="status" aria-live="polite" class="sr-only"> </div>
+                <div class="overflow-hidden">
+                  <div class="flex -ml-4 h-full px-4">
+                    <div role="group" aria-roledescription="slide" aria-hidden="true"
+                      class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-theme-primary dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                      title="e-file your Income Tax Returns (ITR) by Income Tax Department"><a
+                        style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                        class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2 bg-white  dark:bg-black"
+                        href="/services/details/e-file-your-income-tax-returns-itr-by-income-tax-department">
+                        <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                            class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                            src="https://static.india.gov.in/npiprod/uploads/tax_return_a245bd5a5a.jpg"
+                            alt="services" /></div>
+                        <div class="py-4">
+                          <p
+                            class="line-clamp-2 mx-3 text-sm  content-dark-text-clickable  sm:text-base group-hover:text-black font-semibold leading-normal">
+                            e-file your Income Tax Returns (ITR) by Income Tax Department</p>
+                        </div>
+                      </a></div>
+                    <div role="group" aria-roledescription="slide" aria-hidden="true"
+                      class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-theme-primary dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                      title="Interact with PM"><a style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                        class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2 bg-white  dark:bg-black"
+                        href="/services/details/interact-with-pm">
+                        <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                            class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                            src="https://static.india.gov.in/npiprod/uploads/interact_With_PM_ce9d1dd1f5.jpg"
+                            alt="services" /></div>
+                        <div class="py-4">
+                          <p
+                            class="line-clamp-2 mx-3 text-sm  content-dark-text-clickable  sm:text-base group-hover:text-black font-semibold leading-normal">
+                            Interact with PM</p>
+                        </div>
+                      </a></div>
+                    <div role="group" aria-roledescription="slide" aria-hidden="true"
+                      class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-theme-primary dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                      title="National Career Service"><a style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                        class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2 bg-white  dark:bg-black"
+                        href="/services/details/national-career-service">
+                        <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                            class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                            src="https://static.india.gov.in/npiprod/uploads/job_seekers_a3cee82a4a.jpg"
+                            alt="services" /></div>
+                        <div class="py-4">
+                          <p
+                            class="line-clamp-2 mx-3 text-sm  content-dark-text-clickable  sm:text-base group-hover:text-black font-semibold leading-normal">
+                            National Career Service</p>
+                        </div>
+                      </a></div>
+                    <div role="group" aria-roledescription="slide" aria-hidden="true"
+                      class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-theme-primary dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                      title="eSanjeevani - National Telemedicine Service"><a
+                        style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                        class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2 bg-white  dark:bg-black"
+                        href="/services/details/esanjeevani-national-telemedicine-service">
+                        <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                            class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                            src="https://static.india.gov.in/npiprod/uploads/e_sanjeevani_626f9eef48.jpg"
+                            alt="services" /></div>
+                        <div class="py-4">
+                          <p
+                            class="line-clamp-2 mx-3 text-sm  content-dark-text-clickable  sm:text-base group-hover:text-black font-semibold leading-normal">
+                            eSanjeevani - National Telemedicine Service</p>
+                        </div>
+                      </a></div>
+                    <div role="group" aria-roledescription="slide" aria-hidden="true"
+                      class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-theme-primary dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                      title="Apply for New Ujjwala 2.0 Connection"><a style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                        class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2 bg-white  dark:bg-black"
+                        href="/services/details/apply-for-new-ujjwala-20-connection">
+                        <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                            class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                            src="https://static.india.gov.in/npiprod/uploads/ujjwala_77aade7ab0.jpg" alt="services" />
+                        </div>
+                        <div class="py-4">
+                          <p
+                            class="line-clamp-2 mx-3 text-sm  content-dark-text-clickable  sm:text-base group-hover:text-black font-semibold leading-normal">
+                            Apply for New Ujjwala 2.0 Connection</p>
+                        </div>
+                      </a></div>
+                    <div role="group" aria-roledescription="slide" aria-hidden="true"
+                      class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-theme-primary dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                      title="Request for Blocking Lost / Stolen Mobile"><a
+                        style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                        class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2 bg-white  dark:bg-black"
+                        href="/services/details/request-for-blocking-lost-stolen-mobile">
+                        <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                            class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                            src="https://static.india.gov.in/npiprod/uploads/lost_stolen_aa4fd5c536.jpg"
+                            alt="services" /></div>
+                        <div class="py-4">
+                          <p
+                            class="line-clamp-2 mx-3 text-sm  content-dark-text-clickable  sm:text-base group-hover:text-black font-semibold leading-normal">
+                            Request for Blocking Lost / Stolen Mobile</p>
+                        </div>
+                      </a></div>
+                    <div role="group" aria-roledescription="slide" aria-hidden="true"
+                      class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-theme-primary dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                      title="National Cyber Crime Reporting Portal"><a style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                        class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2 bg-white  dark:bg-black"
+                        href="/services/details/national-cyber-crime-reporting-portal">
+                        <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                            class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                            src="https://static.india.gov.in/npiprod/uploads/Cyber_Crime_e18dfc1d3d.jpg"
+                            alt="services" /></div>
+                        <div class="py-4">
+                          <p
+                            class="line-clamp-2 mx-3 text-sm  content-dark-text-clickable  sm:text-base group-hover:text-black font-semibold leading-normal">
+                            National Cyber Crime Reporting Portal</p>
+                        </div>
+                      </a></div>
+                  </div>
+                </div>
+                <div class="flex justify-center absolute left-[50%] translate-x-[-50%] bottom-[-17px]"></div><button
+                  class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden -left-4 sm:-left-12 lg:-left-4 top-1/2 translate-y-[-45%] !hidden"
+                  disabled="" title="Previous" aria-label="Previous slide - Online Services"><svg stroke="currentColor"
+                    fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path>
+                  </svg><span class="sr-only">Previous slide - Online Services</span></button><button
+                  class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden -right-4 sm:-right-12 lg:-right-4 top-1/2 translate-y-[-45%] !hidden"
+                  disabled="" title="Next" aria-label="Next slide - Online Services"><svg stroke="currentColor"
+                    fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class=" h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                  </svg><span class="sr-only">Next slide - Online Services</span></button>
+              </div>
+            </div>
+            <div class="flex justify-end items-center flex-col sm:flex-row gap-2 sm:gap-4 sm:mt-4">
+              <p class="text-white text-[0.9rem] 2xl:text-lg font-normal my-2">Avail online Services &amp; Save time</p>
+              <a title="View All"
+                class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] text-black dark:text-[yellow] dark:bg-transparent md:text-sm text-xs bg-white rounded-[42px] border border-gray-300 h-8 px-4 py-2"
+                aria-label="View All Online Services" href="/services">View All</a>
+            </div>
+          </div>
+          <div
+            class="flex-[1] bg-[#E31E2E] md:bg-white sm:dark:bg-[#121212] py-4 px-4 hidden md:flex gap-3 flex-col sm:flex-row sm:shadow overflow-hidden">
+            <div aria-live="polite" class="w-full relative bg-[#E31E2E] md:!bg-white sm:dark:bg-[#121212] my-auto"
+              role="region" aria-roledescription="carousel">
+              <div role="status" aria-live="polite" class="sr-only"> </div>
+              <div class="overflow-hidden">
+                <div class="flex -ml-4 h-full px-4 sm:dark:bg-[#121212]">
+                  <div role="group" aria-roledescription="slide" aria-hidden="false"
+                    class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-[#E31E2E] sm:dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                    data-index="0" data-total="7"><a tabindex="0"
+                      title="e-file your Income Tax Returns (ITR) by Income Tax Department"
+                      style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                      class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2  dark:bg-black "
+                      href="/services/details/e-file-your-income-tax-returns-itr-by-income-tax-department">
+                      <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                          class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                          src="https://static.india.gov.in/npiprod/uploads/tax_return_a245bd5a5a.jpg" alt="services" />
+                      </div>
+                      <div class="py-4">
+                        <p class="line-clamp-2 mx-3    content-dark-text-clickable font-semibold leading-normal">e-file
+                          your Income Tax Returns (ITR) by Income Tax Department</p>
+                      </div>
+                    </a></div>
+                  <div role="group" aria-roledescription="slide" aria-hidden="false"
+                    class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-[#E31E2E] sm:dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                    data-index="1" data-total="7"><a tabindex="0" title="Interact with PM"
+                      style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                      class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2  dark:bg-black "
+                      href="/services/details/interact-with-pm">
+                      <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                          class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                          src="https://static.india.gov.in/npiprod/uploads/interact_With_PM_ce9d1dd1f5.jpg"
+                          alt="services" /></div>
+                      <div class="py-4">
+                        <p class="line-clamp-2 mx-3    content-dark-text-clickable font-semibold leading-normal">
+                          Interact with PM</p>
+                      </div>
+                    </a></div>
+                  <div role="group" aria-roledescription="slide" aria-hidden="false"
+                    class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-[#E31E2E] sm:dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                    data-index="2" data-total="7"><a tabindex="0" title="National Career Service"
+                      style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                      class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2  dark:bg-black "
+                      href="/services/details/national-career-service">
+                      <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                          class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                          src="https://static.india.gov.in/npiprod/uploads/job_seekers_a3cee82a4a.jpg" alt="services" />
+                      </div>
+                      <div class="py-4">
+                        <p class="line-clamp-2 mx-3    content-dark-text-clickable font-semibold leading-normal">
+                          National Career Service</p>
+                      </div>
+                    </a></div>
+                  <div role="group" aria-roledescription="slide" aria-hidden="true"
+                    class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-[#E31E2E] sm:dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                    data-index="3" data-total="7"><a tabindex="0" title="eSanjeevani - National Telemedicine Service"
+                      style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                      class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2  dark:bg-black "
+                      href="/services/details/esanjeevani-national-telemedicine-service">
+                      <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                          class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                          src="https://static.india.gov.in/npiprod/uploads/e_sanjeevani_626f9eef48.jpg"
+                          alt="services" /></div>
+                      <div class="py-4">
+                        <p class="line-clamp-2 mx-3    content-dark-text-clickable font-semibold leading-normal">
+                          eSanjeevani - National Telemedicine Service</p>
+                      </div>
+                    </a></div>
+                  <div role="group" aria-roledescription="slide" aria-hidden="true"
+                    class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-[#E31E2E] sm:dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                    data-index="4" data-total="7"><a tabindex="0" title="Apply for New Ujjwala 2.0 Connection"
+                      style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                      class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2  dark:bg-black "
+                      href="/services/details/apply-for-new-ujjwala-20-connection">
+                      <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                          class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                          src="https://static.india.gov.in/npiprod/uploads/ujjwala_77aade7ab0.jpg" alt="services" />
+                      </div>
+                      <div class="py-4">
+                        <p class="line-clamp-2 mx-3    content-dark-text-clickable font-semibold leading-normal">Apply
+                          for New Ujjwala 2.0 Connection</p>
+                      </div>
+                    </a></div>
+                  <div role="group" aria-roledescription="slide" aria-hidden="true"
+                    class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-[#E31E2E] sm:dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                    data-index="5" data-total="7"><a tabindex="0" title="Request for Blocking Lost / Stolen Mobile"
+                      style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                      class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2  dark:bg-black "
+                      href="/services/details/request-for-blocking-lost-stolen-mobile">
+                      <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                          class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                          src="https://static.india.gov.in/npiprod/uploads/lost_stolen_aa4fd5c536.jpg" alt="services" />
+                      </div>
+                      <div class="py-4">
+                        <p class="line-clamp-2 mx-3    content-dark-text-clickable font-semibold leading-normal">Request
+                          for Blocking Lost / Stolen Mobile</p>
+                      </div>
+                    </a></div>
+                  <div role="group" aria-roledescription="slide" aria-hidden="true"
+                    class="min-w-0 shrink-0 grow-0 pl-4 basis-1/2 bg-[#E31E2E] sm:dark:bg-[#121212] md:bg-white xl:basis-1/3 group cursor-pointer"
+                    data-index="6" data-total="7"><a tabindex="0" title="National Cyber Crime Reporting Portal"
+                      style="box-shadow:0 0 9px 0px rgba(0,0,0,0.25)"
+                      class="rounded-lg flex flex-col max-w-[14rem] 2xl:max-w-[15rem]  h-[95%] my-2  dark:bg-black "
+                      href="/services/details/national-cyber-crime-reporting-portal">
+                      <div class="w-full aspect-[1.4] max-w-[15rem] overflow-hidden "><img
+                          class=" rounded-t-lg w-full aspect-[1.4]   object-fill"
+                          src="https://static.india.gov.in/npiprod/uploads/Cyber_Crime_e18dfc1d3d.jpg" alt="services" />
+                      </div>
+                      <div class="py-4">
+                        <p class="line-clamp-2 mx-3    content-dark-text-clickable font-semibold leading-normal">
+                          National Cyber Crime Reporting Portal</p>
+                      </div>
+                    </a></div>
+                </div>
+              </div><button
+                class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden -left-4 sm:-left-12 lg:-left-4 top-1/2 translate-y-[-45%] !hidden"
+                disabled="" tabindex="0" title="Previous" aria-label="Previous slide - Online Services"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                  class="h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path>
+                </svg><span class="sr-only">Previous slide - Online Services</span></button><button
+                class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden -right-4 sm:-right-12 lg:-right-4 top-1/2 translate-y-[-45%] !hidden"
+                disabled="" tabindex="0" title="Next" aria-label="Next slide - Online Services"><svg
+                  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                  class=" h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                </svg><span class="sr-only">Next slide - Online Services</span></button>
+              <div class="flex justify-center absolute bottom-[10px] left-[50%] translate-x-[-50%] !bottom-[-13px]">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-padding dark:bg-black bg-[#F8F8FA] ">
+        <div class="flex justify-center mt-4 mb-6">
+          <h2 class="typo-red-underline">Information Categories</h2>
+        </div>
+        <div class="">
+          <div class="flex justify-center " role="carousel">
+            <div class="max-[90svw] sm:max-w-[83svw] ">
+              <div aria-live="polite" class="w-full relative" role="region" aria-roledescription="slide">
+                <div role="status" aria-live="polite" class="sr-only"> </div>
+                <div class="overflow-hidden">
+                  <div class="flex -ml-4"></div>
+                </div>
+                <div
+                  class="flex justify-center absolute bottom-[10px] left-[50%] translate-x-[-50%] !bottom-[-10px] z-[10]">
+                </div><button
+                  class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden sm:-left-12 lg:-left-4 top-1/2 translate-y-[-45%] left-0 2xl:-left-12"
+                  disabled="" title="Previous" aria-label="Previous slide - Information Categories"><svg
+                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path>
+                  </svg><span class="sr-only">Previous slide - Information Categories</span></button><button
+                  class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden sm:-right-12 lg:-right-4 top-1/2 translate-y-[-45%] right-0 2xl:-right-12"
+                  disabled="" title="Next" aria-label="Next slide - Information Categories"><svg stroke="currentColor"
+                    fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class=" h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                  </svg><span class="sr-only">Next slide - Information Categories</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-6"><a tabindex="-1" title="View All" href="/category"><button
+              class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] text-black dark:text-[yellow] dark:bg-transparent md:text-sm text-xs bg-white rounded-[42px] border border-gray-300 h-8 px-3 py-1"
+              aria-label="View All Categories" title="View All Categories">View All</button></a></div>
+      </div>
+      <div class=" dark:bg-black  md:px-16  !pt-0 md:!pt-6 !px-0 bg-[#F8F8FA] "><a
+          class="flex flex-col relative justify-end items-center  sm:mx-auto z-[10] px-4 "
+          href="https://cbpssubscriber.mygov.in/aff/9dlO5d9OlWeVIZCG"><img
+            src="https://cbpssubscriber.mygov.in/assets/uploads/3rpbtfC38B9muoRQ?77" id="_9dlO5d9OlWeVIZCG"
+            class="object-contain max-[90svw] sm:max-w-[83svw]" alt="MANN ki BAAT on 26th October 2025"
+            title="MANN ki BAAT on 26th October 2025" />
+          <div class="absolute bottom-0 left-0 w-full h-1/2 bg-primary-contrast-color dark:bg-black z-[-1]"></div>
+        </a>
+        <div class=" dark:border dark:border-[#333]  bg-primary-contrast-color relative   dark:bg-black  ">
+          <p class="text-primary-contrast-text-color items-center pt-2 text-xs md:text-base text-center">MANN ki BAAT on
+            26th October 2025</p><img src="/image/static/whowho-landing-vector.svg" alt="Landing Vector"
+            class="hidden absolute top-0 opacity-20 left-[2%] pointer-events-none 2xl:block h-[70%]" /><img
+            src="/image/static/whowho-landing-vector.svg" alt="Landing Vector"
+            class="hidden absolute top-0 opacity-20 right-[3%] pointer-events-none 2xl:block h-[70%]" />
+          <div class="h-full flex items-end justify-center z-[8]">
+            <div class=" flex flex-col justify-center items-center text-primary-contrast-text-color mb-4 sm:mb-16">
+              <div class="flex flex-wrap md:justify-center justify-start relative gap-3 ">
+                <h2 class="typo-red-underline my-4">Government Schemes</h2>
+              </div>
+              <div
+                class="flex bg-[#FAFAFB]   h-[3.188rem] w-[17.938rem] rounded-[11px] overflow-hidden items-center pr-4 my-2 sm:h-[3.5rem]  2xl:h-[4.188rem] sm:w-[33.938rem] lg:w-[40rem] 2xl:w-[55.938rem] md:w-[43.938rem]">
+                <label for="schemeSearch" class="sr-only">Search Schemes</label><input id="schemeSearch"
+                  class=" w-full outline-none pl-8 text-black bg-transparent" placeholder="Search Schemes" type="text"
+                  aria-label="Search schemes" title="Search Schemes Here" value="" /><button
+                  title="Search schemes Button" aria-label="Search schemes Button" class="p-2 hover:bg-[#F7F7F7]"><svg
+                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="w-6 h-6 fill-[#393F47]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z">
+                    </path>
+                  </svg></button></div>
+              <div class="flex justify-center my-2 sm:my-4">
+                <h2 class="text-primary-or-text-color text-base sm:text-[1.25rem] md:text-[1.5rem] lg:text-[1.8rem]">OR
+                </h2>
+              </div>
+              <div class="flex flex-row mx-auto gap-4 max-w-[837px] justify-center min-h-[80px] sm:min-h-[101px]">
+                <div class="flex flex-col justify-center items-center ">
+                  <h2 class="text-base sm:text-[1.25rem] md:text-[1.5rem] lg:text-[1.6rem]">Find Personalised Schemes
+                  </h2><a class="mt-2 sm:mt-4" tabindex="-1" href="/my-government/schemes"><button
+                      class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] text-black dark:text-[yellow] dark:bg-transparent md:text-sm text-xs bg-white rounded-[42px] border border-gray-300 h-8 px-3 py-1"
+                      title="Check Your Eligibility">Check Your Eligibility</button></a>
+                  <div class="mt-3 sm:mt-6 flex items-center">
+                    <p class="text-primary-contrast-text-color text-[13px]">Powered by :</p><img
+                      src="/image/myscheme-logo.svg" alt="My schemes logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="bg-white dark-black section-padding">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4  mx-auto w-[98%] md:w-[95%] max-w-[82.5vw]">
+          <div class="news-grid grid grid-rows-subgrid row-span-3 gap-4 md:gap-4">
+            <div class="news-grid-heading">
+              <h2 class="typo-red-underline">News / Press Release</h2>
+              <p class="mt-2 content-dark-text-not-clickable">Your Gateway to Authentic News</p>
+            </div>
+            <div class="news-grid-content grid grid-cols-1 gap-2 md:gap-4  ">
+              <div class="p-2 sm:p-8 bg-[#e1e1e9] dark:bg-black rounded-lg flex flex-col justify-between gap-4">
+                <ul class="grid sm:grid-cols-3 h-full gap-4">
+                  <li><a
+                      class="h-full w-full relative bg-white rounded-[10.70px] shadow p-2 sm:p-4 flex flex-col justify-between gap-2 sm:gap-6"
+                      href="https://pib.gov.in/"><span class=" flex-1"><img
+                          class="mx-auto  my-auto max-h-[50px] sm:max-h-[156.32px] aspect-square object-contain"
+                          src="/image/pibDefaultLogo.png" alt="Press Information Bureau" /></span>
+                      <p
+                        class="text-center text-black text-xs sm:text-base 3xl:text-xl font-bold pt-4 border-t border-[#e1e1e9] flex-1 flex justify-center items-center">
+                        Press Information Bureau</p>
+                    </a></li>
+                  <li><a
+                      class="h-full w-full relative bg-white rounded-[10.70px] shadow p-2 sm:p-4 flex flex-col justify-between gap-2 sm:gap-6"
+                      href="https://ddnews.gov.in/en/"><span class=" flex-1"><img
+                          class="mx-auto  my-auto max-h-[50px] sm:max-h-[156.32px] aspect-square object-contain"
+                          src="/image/ddDefaultLogo.png" alt="Doordarshan News" /></span>
+                      <p
+                        class="text-center text-black text-xs sm:text-base 3xl:text-xl font-bold pt-4 border-t border-[#e1e1e9] flex-1 flex justify-center items-center">
+                        Doordarshan News</p>
+                    </a></li>
+                  <li><a
+                      class="h-full w-full relative bg-white rounded-[10.70px] shadow p-2 sm:p-4 flex flex-col justify-between gap-2 sm:gap-6"
+                      href="https://www.newsonair.gov.in/"><span class=" flex-1"><img
+                          class="mx-auto  my-auto max-h-[50px] sm:max-h-[156.32px] aspect-square object-contain"
+                          src="/image/airDefaultLogo.png" alt="News on Air" /></span>
+                      <p
+                        class="text-center text-black text-xs sm:text-base 3xl:text-xl font-bold pt-4 border-t border-[#e1e1e9] flex-1 flex justify-center items-center">
+                        News on Air</p>
+                    </a></li>
+                </ul>
+                <p class="text-center text-black text-lg font-medium ">Explore the latest insights from our key
+                  partners.</p>
+              </div>
+            </div>
+            <div class="news-grid-footer flex justify-center"><a tabindex="-1" title="View All"
+                href="/news/news-on-air"><button
+                  class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] text-black dark:text-[yellow] dark:bg-transparent md:text-sm text-xs bg-white rounded-[42px] border border-gray-300 h-8 px-3 py-1"
+                  aria-label="View All News / Press Release" title="View All News / Press Release">View All</button></a>
+            </div>
+          </div>
+          <div class="spotlight-grid grid grid-rows-subgrid row-span-3 gap-4 md:gap-4">
+            <div class="spotlight-grid-heading">
+              <h2 class="typo-red-underline">Spotlight</h2>
+              <p class=" mt-2 content-dark-text-not-clickable">Stories from the Core of Our Nation</p>
+            </div>
+            <div
+              class="spotlight-grid-content grid grid-cols-1 md:grid-cols-2 border border-stone-300 overflow-hidden dark:border-[#333]">
+              <div class="bg-theme-primary dark:bg-[#121212] w-full ">
+                <div>
+                  <div class="object-cover m-0.5"><img class="w-full h-full aspect-video object-center object-cover"
+                      src="https://static.india.gov.in/npiprod/uploads/ntf_v2_9505540e49.png"
+                      title="National Task Force" alt="" /></div>
+                  <div class="px-4 py-3.5 flex flex-col justify-around">
+                    <p class="text-theme-text-color content-dark-text-not-clickable text-base">September 2025<!-- -->
+                    </p><a
+                      class="hover:underline text-theme-text-color ellipsis-3 mt-1 content-dark-text-clickable text-lg font-bold"
+                      href="/spotlight/details/national-task-force">National Task Force</a>
+                    <p class="text-theme-text-color typo-text-paragraph-2 my-2 line-clamp-3 sm:line-clamp-6 "
+                      title="On 24th March 2025, The Honourable ,[object Object], emphasized the urgent need to address mental health concerns among students in higher education institutions. The Honourable Supreme Court of India constituted a ,[object Object], under the Chairpersonship of Justice (Retired) S. Ravindra Bhat. The Task Force includes experts from various domains. Its mandate is to deliberate on student mental health issues, recommend preventive measures to reduce student suicides, and strengthen support systems across higher educational institutions.
+
+The ,[object Object], comprises of representatives from diverse fields to ensure and interdisciplinary approach to tackling the issue of ,[object Object],. Additionally, the Secretary of the ,[object Object],, ,[object Object],; the Secretary of the ,[object Object],, ,[object Object],; the Secretary of the ,[object Object],; the Secretary of the ,[object Object],,,[object Object],, Government of India, will serve as ex-officio members. The Joint Secretary of the Department of Higher Education will act as the convener of the Task Force. Further, the Chief Secretaries of all the States/Union Territories have been directed to nominate a high-ranking officer, not below the rank of Joint Secretary in the Department of Higher Education of the respective State/Union Territory, to act as the nodal officer on behalf of the respective State/Union Territory.">
+                      On 24th March 2025, The Honourable <a
+                        class="content-dark-text-clickable dark:!text-500 hover:underline"
+                        title="External link that opens in a new window" href="">Supreme Court of India</a> emphasized
+                      the urgent need to address mental health concerns among students in higher education institutions.
+                      The Honourable Supreme Court of India constituted a <strong>National Task Force</strong> under the
+                      Chairpersonship of Justice (Retired) S. Ravindra Bhat. The Task Force includes experts from
+                      various domains. Its mandate is to deliberate on student mental health issues, recommend
+                      preventive measures to reduce student suicides, and strengthen support systems across higher
+                      educational institutions.
+
+                      The <strong>National Task Force</strong> comprises of representatives from diverse fields to
+                      ensure and interdisciplinary approach to tackling the issue of <strong>Mental Health Concerns and
+                        commission of suicides in Educational Institutions</strong>. Additionally, the Secretary of the
+                      <strong>Department of Higher Education</strong>, <a
+                        class="content-dark-text-clickable dark:!text-500 hover:underline"
+                        title="External link that opens in a new window" href="">Ministry of Education</a>; the
+                      Secretary of the <strong>Department of Social Justice &amp; Empowerment</strong>, <strong>Ministry
+                        of Social Justice &amp; Empowerment</strong>; the Secretary of the <a
+                        class="content-dark-text-clickable dark:!text-500 hover:underline"
+                        title="External link that opens in a new window" href="">Ministry of Women and Child
+                        Development</a>; the Secretary of the <strong>Department of Legal Affairs</strong>,<strong>
+                        Ministry of Law and Justice</strong>, Government of India, will serve as ex-officio members. The
+                      Joint Secretary of the Department of Higher Education will act as the convener of the Task Force.
+                      Further, the Chief Secretaries of all the States/Union Territories have been directed to nominate
+                      a high-ranking officer, not below the rank of Joint Secretary in the Department of Higher
+                      Education of the respective State/Union Territory, to act as the nodal officer on behalf of the
+                      respective State/Union Territory.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 md:p-4 flex flex-col justify-around "><a class="py-[0.7rem] cursor-pointer"
+                  href="/spotlight/details/pm-pranam-pm-programme-for-restoration-awareness-generation-nourishment-and-amelioration-of-mother-earth">
+                  <p class="md:text-sm text-xs content-dark-text-not-clickable">August 2025</p>
+                  <h3 class="font-semibold leading-tight  hover:underline content-dark-text-clickable"
+                    title="PM-PRANAM (PM Programme for Restoration, Awareness Generation, Nourishment, and Amelioration of Mother Earth)">
+                    PM-PRANAM (PM Programme for Restoration, Awareness Generation, Nourishment, and Amelioration of
+                    Mother Earth)</h3>
+                </a><a class="py-[0.7rem] cursor-pointer" href="/spotlight/details/senior-citizens-welfare-portal">
+                  <p class="md:text-sm text-xs content-dark-text-not-clickable">July 2025</p>
+                  <h3 class="font-semibold leading-tight  hover:underline content-dark-text-clickable"
+                    title="Senior Citizens Welfare Portal">Senior Citizens Welfare Portal</h3>
+                </a><a class="py-[0.7rem] cursor-pointer"
+                  href="/spotlight/details/pradhan-mantri-uchchatar-shiksha-abhiyan-pm-usha">
+                  <p class="md:text-sm text-xs content-dark-text-not-clickable">June 2025</p>
+                  <h3 class="font-semibold leading-tight  hover:underline content-dark-text-clickable"
+                    title="Pradhan Mantri Uchchatar Shiksha Abhiyan (PM-USHA)">Pradhan Mantri Uchchatar Shiksha Abhiyan
+                    (PM-USHA)</h3>
+                </a><a class="py-[0.7rem] cursor-pointer"
+                  href="/spotlight/details/electronics-component-manufacturing-scheme">
+                  <p class="md:text-sm text-xs content-dark-text-not-clickable">May 2025</p>
+                  <h3 class="font-semibold leading-tight  hover:underline content-dark-text-clickable"
+                    title="Electronics Component Manufacturing Scheme">Electronics Component Manufacturing Scheme</h3>
+                </a><a class="py-[0.7rem] cursor-pointer"
+                  href="/spotlight/details/prime-ministers-young-authors-mentorship-scheme-yuva-30-scheme">
+                  <p class="md:text-sm text-xs content-dark-text-not-clickable">April 2025</p>
+                  <h3 class="font-semibold leading-tight  hover:underline content-dark-text-clickable"
+                    title="Prime Minister&#x27;s Young Authors Mentorship Scheme (YUVA 3.0) Scheme">Prime
+                    Minister&#x27;s Young Authors Mentorship Scheme (YUVA 3.0) Scheme</h3>
+                </a></div>
+            </div>
+            <div class="spotlight-grid-footer flex justify-center"><a tabindex="-1" title="View All"
+                href="/spotlight"><button
+                  class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] text-black dark:text-[yellow] dark:bg-transparent md:text-sm text-xs bg-white rounded-[42px] border border-gray-300 h-8 px-3 py-1"
+                  aria-label="View All Spot Light" title="View All Spot Light">View All</button></a></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-[#F8F8FA]  dark:bg-black mix-blend-normal bg-no-repeat bg-top bg-[url(&quot;/image/static/GovernmentDirectoriesVector.png&quot;)] section-padding">
+        <div class="">
+          <div class="flex justify-center  mx-auto  mb-8 ">
+            <h2 class="typo-red-underline">Government Directories</h2>
+          </div>
+          <ul class="card-grid sm:mx-10 mx-4 xl:mx-40 my-4"><a title="Who&#x27;s Who"
+              class="card-grid-sub-grid bg-white py-8 w-full theme-box-shadow rounded-lg px-2 dark:border dark:border-[#333]"
+              href="/directory/whos-who">
+              <div class="flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                    class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                      fill="currentFill"></path>
+                  </svg><span class="sr-only">Loading...</span></div>
+                <p class="text-center dark:text-[yellow] ">Who&#x27;s Who</p>
+              </div>
+            </a><a title="Contact Directory"
+              class="card-grid-sub-grid bg-white py-8 w-full theme-box-shadow rounded-lg px-2 dark:border dark:border-[#333]"
+              href="/directory/contact-directory">
+              <div class="flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                    class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                      fill="currentFill"></path>
+                  </svg><span class="sr-only">Loading...</span></div>
+                <p class="text-center dark:text-[yellow] ">Contact Directory</p>
+              </div>
+            </a><a title="Web Directory"
+              class="card-grid-sub-grid bg-white py-8 w-full theme-box-shadow rounded-lg px-2 dark:border dark:border-[#333]"
+              href="/directory/web-directory">
+              <div class="flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                    class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                      fill="currentFill"></path>
+                  </svg><span class="sr-only">Loading...</span></div>
+                <p class="text-center dark:text-[yellow] ">Web Directory</p>
+              </div>
+            </a><a title="Public Utilities"
+              class="card-grid-sub-grid bg-white py-8 w-full theme-box-shadow rounded-lg px-2 dark:border dark:border-[#333]"
+              href="/directory/public-utilities">
+              <div class="flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                    class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                      fill="currentFill"></path>
+                  </svg><span class="sr-only">Loading...</span></div>
+                <p class="text-center dark:text-[yellow] ">Public Utilities</p>
+              </div>
+            </a><a title="Help Line"
+              class="card-grid-sub-grid bg-white py-8 w-full theme-box-shadow rounded-lg px-2 dark:border dark:border-[#333]"
+              href="/directory/helpline">
+              <div class="flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                    class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                      fill="currentColor"></path>
+                    <path
+                      d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                      fill="currentFill"></path>
+                  </svg><span class="sr-only">Loading...</span></div>
+                <p class="text-center dark:text-[yellow] ">Help Line</p>
+              </div>
+            </a></ul>
+        </div>
+      </section>
+      <div class="bg-[#F8F8FA] dark-black overflow-hidden">
+        <div class="flex justify-center  section-padding mx-auto ">
+          <h2 class="typo-red-underline">Explore India</h2>
+        </div>
+        <div class=" w-full md:w-[95%] lg:max-w-[82.5svw] mx-auto relative z-[1] ">
+          <div
+            class="absolute  bg-explore-bharat-background-color dark:bg-black  top-[50%] translate-y-[-50%] -translate-x-1/2  left-[50%] h-[80%] w-[100svw]">
+            <img class="absolute left-[-16rem] sm:left-0 bottom-0 opacity-50"
+              src="/image/static/ExploreBharatBGLeftVector.png" role="presentation" /><img
+              class="absolute right-[-16rem] sm:right-0 bottom-0 opacity-50"
+              src="/image/static/ExploreBharatBGRightVector.png" role="presentation" /></div>
+          <div class="bg-explore-bharat-foreground-color dark:bg-black z-[2] relative">
+            <div class="flex flex-col lg:flex-row items-center z-[1] dark:border dark:border-[#333]">
+              <div class="w-full">
+                <div aria-live="polite" class="bg-[#282276] p-0 sm:bg-black max-w-[1008px] relative" role="region"
+                  aria-roledescription="carousel">
+                  <div role="status" aria-live="polite" class="sr-only"> </div>
+                  <div class="overflow-hidden">
+                    <div class="flex -ml-4 sm:h-[30rem] lg:h-[35.625rem]">
+                      <div role="group" aria-roledescription="slide" aria-hidden="false"
+                        class="min-w-0 shrink-0 grow-0 basis-full pl-4 relative !p-0 cursor-pointer" tabindex="0"
+                        data-index="0" data-total="5"><img title="Tourist Places "
+                          class="w-full h-full object-cover group-hover:brightness-[0.8] transition-all duration-300 ease-in-out "
+                          src="https://static.india.gov.in/npiprod/uploads/Hawa_Mahal_be58ad6eb9.jpg"
+                          alt="exploreBharatImageLeft" />
+                        <div class="absolute bottom-[2rem] left-[3rem] z-[1]">
+                          <h3 class="text-white font-normal font-[&#x27;Unna&#x27;] sm:mb-2">Tourist Places </h3>
+                          <p class="text-white font-light">Hawa Mahal</p>
+                        </div>
+                        <div class="image-shadow-overlay h-full w-full bottom-0 absolute"></div>
+                      </div>
+                      <div role="group" aria-roledescription="slide" aria-hidden="true"
+                        class="min-w-0 shrink-0 grow-0 basis-full pl-4 relative !p-0 cursor-pointer" tabindex="0"
+                        data-index="1" data-total="5"><img title="Culinary Delights"
+                          class="w-full h-full object-cover group-hover:brightness-[0.8] transition-all duration-300 ease-in-out "
+                          src="https://static.india.gov.in/npiprod/uploads/culinary_740698f49c.png"
+                          alt="exploreBharatImageLeft" />
+                        <div class="absolute bottom-[2rem] left-[3rem] z-[1]">
+                          <h3 class="text-white font-normal font-[&#x27;Unna&#x27;] sm:mb-2">Culinary Delights</h3>
+                          <p class="text-white font-light">Daal Baati</p>
+                        </div>
+                        <div class="image-shadow-overlay h-full w-full bottom-0 absolute"></div>
+                      </div>
+                      <div role="group" aria-roledescription="slide" aria-hidden="true"
+                        class="min-w-0 shrink-0 grow-0 basis-full pl-4 relative !p-0 cursor-pointer" tabindex="0"
+                        data-index="2" data-total="5"><img title="One District One Product"
+                          class="w-full h-full object-cover group-hover:brightness-[0.8] transition-all duration-300 ease-in-out "
+                          src="https://static.india.gov.in/npiprod/uploads/Group_1000004357_1_11b4946099.png"
+                          alt="exploreBharatImageLeft" />
+                        <div class="absolute bottom-[2rem] left-[3rem] z-[1]">
+                          <h3 class="text-white font-normal font-[&#x27;Unna&#x27;] sm:mb-2">One District One Product
+                          </h3>
+                          <p class="text-white font-light"></p>
+                        </div>
+                        <div class="image-shadow-overlay h-full w-full bottom-0 absolute"></div>
+                      </div>
+                      <div role="group" aria-roledescription="slide" aria-hidden="true"
+                        class="min-w-0 shrink-0 grow-0 basis-full pl-4 relative !p-0 cursor-pointer" tabindex="0"
+                        data-index="3" data-total="5"><img title="Facts of India"
+                          class="w-full h-full object-cover group-hover:brightness-[0.8] transition-all duration-300 ease-in-out "
+                          src="https://static.india.gov.in/npiprod/uploads/a_g_Yu_Qg_N_Yku1_M8_unsplash_1_1b182a0ec2.jpg"
+                          alt="exploreBharatImageLeft" />
+                        <div class="absolute bottom-[2rem] left-[3rem] z-[1]">
+                          <h3 class="text-white font-normal font-[&#x27;Unna&#x27;] sm:mb-2">Facts of India</h3>
+                          <p class="text-white font-light">Bengal Tiger</p>
+                        </div>
+                        <div class="image-shadow-overlay h-full w-full bottom-0 absolute"></div>
+                      </div>
+                      <div role="group" aria-roledescription="slide" aria-hidden="true"
+                        class="min-w-0 shrink-0 grow-0 basis-full pl-4 relative !p-0 cursor-pointer" tabindex="0"
+                        data-index="4" data-total="5"><img title="One District One Product"
+                          class="w-full h-full object-cover group-hover:brightness-[0.8] transition-all duration-300 ease-in-out "
+                          src="https://static.india.gov.in/npiprod/uploads/teracotta_23519ecedc_28d2357ff4.jpg"
+                          alt="exploreBharatImageLeft" />
+                        <div class="absolute bottom-[2rem] left-[3rem] z-[1]">
+                          <h3 class="text-white font-normal font-[&#x27;Unna&#x27;] sm:mb-2">One District One Product
+                          </h3>
+                          <p class="text-white font-light">Teracotta</p>
+                        </div>
+                        <div class="image-shadow-overlay h-full w-full bottom-0 absolute"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-center absolute bottom-[10px] left-[50%] translate-x-[-50%]"></div><button
+                    class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group -left-4 sm:-left-12 lg:-left-4 top-1/2 translate-y-[-45%] hidden sm:flex !left-0 sm:!left-[-26px] !z-10"
+                    disabled="" tabindex="0" title="Previous" aria-label="Previous slide - Explore Bharat"><svg
+                      stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                      class="h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path>
+                    </svg><span class="sr-only">Previous slide - Explore Bharat</span></button><button
+                    class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group -right-4 sm:-right-12 lg:-right-4 top-1/2 translate-y-[-45%] hidden sm:flex !right-0 sm:!right-[-26px] !z-10"
+                    disabled="" tabindex="0" title="Next" aria-label="Next slide - Explore Bharat"><svg
+                      stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                      class=" h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                    </svg><span class="sr-only">Next slide - Explore Bharat</span></button><button
+                    class="absolute bottom-0 right-0 aspect-square p-2 rounded-full bg-white m-4 dark-card"
+                    title="Play"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                      class="size-[18px] dark:fill-yellow-400" height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g id="Stop_1">
+                        <path
+                          d="M18.437,20.937H5.563a2.5,2.5,0,0,1-2.5-2.5V5.563a2.5,2.5,0,0,1,2.5-2.5H18.437a2.5,2.5,0,0,1,2.5,2.5V18.437A2.5,2.5,0,0,1,18.437,20.937ZM5.563,4.063a1.5,1.5,0,0,0-1.5,1.5V18.437a1.5,1.5,0,0,0,1.5,1.5H18.437a1.5,1.5,0,0,0,1.5-1.5V5.563a1.5,1.5,0,0,0-1.5-1.5Z">
+                        </path>
+                      </g>
+                    </svg></button>
+                </div>
+              </div>
+              <div class=" lg:max-w-[592px] w-full py-4 md:py-8 px-2 md:px-4 lg:px-0 z-[1] ">
+                <div style="grid-auto-rows:1fr;grid-auto-columns:1fr"
+                  class="grid grid-cols-4 lg:grid-cols-2 gap-4 overflow-x-auto no-scrollbar min-w-[370px] mx-auto lg:mx-20">
+                  <a title="Travel &amp; Tourism card"
+                    class="anv-block lg:aspect-square flex flex-col gap-2 items-center justify-center border border-gray-300 dark:border-[#333] rounded md:rounded-lg bg-explore-bharat-tile-color dark:bg-[#121212] p-2 md:px-0"
+                    href="/explore-india/travel-and-tourism">
+                    <div class="">
+                      <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                          class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                            fill="currentFill"></path>
+                        </svg><span class="sr-only">Loading...</span></div>
+                    </div>
+                    <div>
+                      <p
+                        class=" whitespace-pre-line text-explore-bharat-icon-color content-dark-text-clickable text-[0.8rem] text-center leading-none font-bold sm:text-base md:text-lg my-2 sm:my-0 ">
+                        Travel &amp; Tourism<!-- --> </p>
+                    </div>
+                  </a><a title="Culinary Delight card"
+                    class="anv-block lg:aspect-square flex flex-col gap-2 items-center justify-center border border-gray-300 dark:border-[#333] rounded md:rounded-lg bg-explore-bharat-tile-color dark:bg-[#121212] p-2 md:px-0"
+                    href="/explore-india/culinary-delights">
+                    <div class="">
+                      <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                          class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                            fill="currentFill"></path>
+                        </svg><span class="sr-only">Loading...</span></div>
+                    </div>
+                    <div>
+                      <p
+                        class=" whitespace-pre-line text-explore-bharat-icon-color content-dark-text-clickable text-[0.8rem] text-center leading-none font-bold sm:text-base md:text-lg my-2 sm:my-0 ">
+                        Culinary Delight<!-- --> </p>
+                    </div>
+                  </a><a title="One District 
+ One Product card" class="anv-block lg:aspect-square flex flex-col gap-2 items-center justify-center border border-gray-300 dark:border-[#333] rounded md:rounded-lg bg-explore-bharat-tile-color dark:bg-[#121212] p-2 md:px-0"
+                    href="/explore-india/odop">
+                    <div class="">
+                      <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                          class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                            fill="currentFill"></path>
+                        </svg><span class="sr-only">Loading...</span></div>
+                    </div>
+                    <div>
+                      <p
+                        class=" whitespace-pre-line text-explore-bharat-icon-color content-dark-text-clickable text-[0.8rem] text-center leading-none font-bold sm:text-base md:text-lg my-2 sm:my-0 ">
+                        One District
+                        One Product<!-- --> </p>
+                    </div>
+                  </a><a title="Facts of India card"
+                    class="anv-block lg:aspect-square flex flex-col gap-2 items-center justify-center border border-gray-300 dark:border-[#333] rounded md:rounded-lg bg-explore-bharat-tile-color dark:bg-[#121212] p-2 md:px-0"
+                    href="/explore-india/facts-of-india">
+                    <div class="">
+                      <div class="flex justify-center items-center h-full" role="status"><svg aria-hidden="true"
+                          class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-theme-primary"
+                          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                            fill="currentColor"></path>
+                          <path
+                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                            fill="currentFill"></path>
+                        </svg><span class="sr-only">Loading...</span></div>
+                    </div>
+                    <div>
+                      <p
+                        class=" whitespace-pre-line text-explore-bharat-icon-color content-dark-text-clickable text-[0.8rem] text-center leading-none font-bold sm:text-base md:text-lg my-2 sm:my-0 ">
+                        Facts of India<!-- --> </p>
+                    </div>
+                  </a></div>
+                <div class="flex flex-row justify-center items-center w-full mt-4 sm:mt-5">
+                  <div class=""><a title="Explore All" tabindex="-1" href="/explore-india"><button
+                        class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] text-black dark:text-[yellow] dark:bg-transparent md:text-sm text-xs bg-white rounded-[42px] border border-gray-300 h-8 px-3 py-1"
+                        aria-label="Explore Bharat Explore All">Explore All</button></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-padding !px-0  md:!px-16 bg-white dark-black">
+        <div class="flex flex-col items-center  sm:mb-24 lg:mb-[9rem]">
+          <h2 class="typo-red-underline"> MyGov Connect </h2>
+          <p class="text-neutral-600 my-3 dark:text-white">Participate in nation-building activities</p>
+        </div>
+        <div class="flex justify-center">
+          <div
+            class="bg-mygov-connect-bg-color dark:bg-[#121212] py-4 md:py-0 px-4 w-full 3xl:max-w-[82.5svw] dark:border dark:border-[#333]">
+            <div aria-live="polite" class="relative md:hidden w-full my-auto bg-mygov-connect-bg-color" role="region"
+              aria-roledescription="carousel">
+              <div role="status" aria-live="polite" class="sr-only"> </div>
+              <div class="overflow-hidden">
+                <div class="flex -ml-4 h-full px-4"></div>
+              </div>
+              <div class="flex justify-center absolute bottom-[10px] left-[50%] translate-x-[-50%] !bottom-[-14px]">
+              </div><button
+                class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden -left-4 sm:-left-12 lg:-left-4 top-1/2 translate-y-[-45%]"
+                disabled="" tabindex="0" title="Previous" aria-label="Previous slide"><svg stroke="currentColor"
+                  fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                  class="h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path>
+                </svg><span class="sr-only">Previous slide</span></button><button
+                class="items-center justify-center whitespace-nowrap ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-theme-primary bg-white/90 shadow-[0_0_9px_0px_rgba(0,0,0,0.25)] font-bold hover:bg-[var(--primary-color)] hover:text-white text-theme-primary absolute h-12 w-12 rounded-full dark:bg-[#121212] dark:border dark:border-[#dde0de] dark:hover:bg-[yellow] group hidden -right-4 sm:-right-12 lg:-right-4 top-1/2 translate-y-[-45%]"
+                disabled="" tabindex="0" title="Next" aria-label="Next slide"><svg stroke="currentColor"
+                  fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                  class=" h-4 w-4 dark:group-hover:fill-black dark:fill-[yellow]" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 13H4V11H12V4L20 12L12 20V13Z"></path>
+                </svg><span class="sr-only">Next slide</span></button>
+            </div>
+            <div class="hidden md:flex justify-center flex-col md:flex-row gap-4  sm:gap-10 lg:-mt-32 sm:-mt-20"></div>
+            <div class="flex justify-center mt-5 mb-5 sm:mb-10 "><a title="View All" tabindex="-1"
+                href="/mygov-activities"><button
+                  class="inline-flex items-center justify-center whitespace-nowrap font-medium ring-black ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:border-[yellow] text-black dark:text-[yellow] dark:bg-transparent md:text-sm text-xs bg-white rounded-[42px] border border-gray-300 h-8 px-3 py-1"
+                  aria-label="MyGov Connect View All" title="MyGov Connect View All">View All</button></a></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>$RC = function (b, c, e) { c = document.getElementById(c); c.parentNode.removeChild(c); var a = document.getElementById(b); if (a) { b = a.previousSibling; if (e) b.data = "$!", a.setAttribute("data-dgst", e); else { e = b.parentNode; a = b.nextSibling; var f = 0; do { if (a && 8 === a.nodeType) { var d = a.data; if ("/$" === d) if (0 === f) break; else f--; else "$" !== d && "$?" !== d && "$!" !== d || f++ } d = a.nextSibling; e.removeChild(a); a = d } while (a); for (; c.firstChild;)e.insertBefore(c.firstChild, a); b.data = "$" } b._reactRetry && b._reactRetry() } }; $RC("B:0", "S:0")</script>
+</body>
+
+</html>
