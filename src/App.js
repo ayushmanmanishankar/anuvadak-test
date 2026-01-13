@@ -1,288 +1,179 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import DummyContent from './components/DummyContent';
-import Contact from './components/Contact';
-import About from './components/About';
-import IndiaPortal from './components/IndiaPortal';
+import React, { useState } from "react";
+import "./App.css";
 
-function Home() {
+const productsData = [
+  {
+    id: 1,
+    name: "Gaming Laptop",
+    category: "Laptop",
+    price: 1899,
+    rating: 5,
+    image:
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+  },
+  {
+    id: 2,
+    name: "Wireless Headphones",
+    category: "Audio",
+    price: 299,
+    rating: 4,
+    image:
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+  },
+  {
+    id: 3,
+    name: "Smartphone Pro",
+    category: "Mobile",
+    price: 999,
+    rating: 5,
+    image:
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+  },
+  {
+    id: 4,
+    name: "Smart Watch",
+    category: "Wearable",
+    price: 399,
+    rating: 4,
+    image:
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+  },
+  {
+    id: 5,
+    name: "Mechanical Keyboard",
+    category: "Accessories",
+    price: 199,
+    rating: 5,
+    image:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+  },
+  {
+    id: 6,
+    name: "4K Monitor",
+    category: "Accessories",
+    price: 549,
+    rating: 4,
+    image:
+      "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04",
+  },
+];
+
+export default function App() {
+  const [cart, setCart] = useState([]);
+  const [filter, setFilter] = useState("All");
+  const [search, setSearch] = useState("");
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+  const removeFromCart = (id) => {
+    setCart(cart.filter((item, index) => index !== id));
+  };
+
+  const filteredProducts = productsData.filter((product) => {
+    const matchCategory =
+      filter === "All" || product.category === filter;
+    const matchSearch = product.name
+      .toLowerCase()
+      .includes(search.toLowerCase());
+    return matchCategory && matchSearch;
+  });
+
+  const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+
   return (
-    <>
-      <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="app">
+      {/* NAVBAR */}
+      <header className="navbar">
+        <h1 className="logo">ElectroMax</h1>
 
-          <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-            <li className="mb-2 tracking-[-.01em]">
-              Get started by editing{" "}
-              <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-                src/app/page.js
-              </code>
-              .
-            </li>
-            <li className="tracking-[-.01em]" avk-only-nmt="true">
-              Save and see your changes instantly.
-            </li>
-            <li className="mt-2 tracking-[-.01em]" avk-only-nmt="true">
-              Explore the Next.js 14 documentation to learn more about the new
-              features.
-            </li>
-            <li className="mt-2 tracking-[-.01em]" avk-only-nmt="true">
-              App will automatically reload as you edit the code.
-            </li>
-          </ol>
+        <input
+          type="text"
+          placeholder="Search electronics..."
+          className="search"
+          onChange={(e) => setSearch(e.target.value)}
+        />
 
-          <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left" avk-only-nmt="true">
-            <li className="mb-2 tracking-[-.01em]">
-              Content 1
-            </li>
-            <li className="tracking-[-.01em]">
-              Content 2
-            </li>
-          </ol>
+        <div className="cart-icon">
+          🛒 <span>{cart.length}</span>
+        </div>
+      </header>
 
-          <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-            <li className="mt-2 tracking-[-.01em]">
-              App will automatically reload as you edit the code.
-            </li>
-          </ol>
-
-          <div className="flex gap-4 items-center flex-col sm:flex-row">
-            <a
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-
-              Deploy now
-            </a>
-            <a
-              className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read our docs
-            </a>
-          </div>
-        </main>
-        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            Learn
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            Examples
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="/page2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            Go to nextjs.org →
-          </a>
-          <p avk-only-nmt="true">
-            Multi Page Content 1
-          </p>
-          <p avk-only-nmt="true">
-            Multi Page Content 2
-          </p>
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-content">
+          <h2>Next-Gen Electronics</h2>
           <p>
-            Multi Page Content 2
+            Premium gadgets. Ultra performance. Future-ready technology.
           </p>
-          <p><span>Hello</span></p>
-          <p><a>Hello</a></p>
-        </footer>
-      </div>
-    </>
-  )
-}
-
-
-
-function About2() {
-  return (
-    <>
-      <p avk-only-nmt="true">Newly Added test content 2</p>
-    </>
-  );
-}
-
-function Contact2() {
-  return (
-    <>
-      <h2 avk-only-nmt="false" aria-label="Adding for sanity">Newly Added 6</h2 >
-      <h2>Something beautiful</h2 >
-      <p avk-only-nmt="false">Contact Page 2 - Reach us at contact @example.com.</p>
-
-    </>
-  )
-}
-
-function Contact3() {
-  return (
-<></>
-  )
-}
-
-function Contact4() {
-  return (
- <>
-      {/* Pair 1: Equivalent. Styles are different but structure/content is identical. */}
-      <p
-        className="status"
-        style={{
-          backgroundColor: '#e6ffe6',
-          color: '#006400',
-          padding: '10px 15px',
-          border: '1px solid #006400',
-          borderRadius: '4px',
-          fontWeight: 'bold',
-          fontFamily: 'Arial, sans-serif'
-        }}
-      >
-        Active
-      </p>
-      <span
-        className="status"
-        style={{
-          background: 'linear-gradient(to right, #f0fff0, #e0f8e0)',
-          color: '#006400',
-          padding: '10px 15px',
-          border: '1px solid #006400',
-          borderRadius: '4px',
-          fontWeight: 'bold',
-          fontFamily: 'Arial, sans-serif',
-          display: 'inline-block',
-          margin: '5px'
-        }}
-      >
-        Active
-      </span>
-
-      {/* Pair 2: Equivalent. Different tags and styles, same structure/content. */}
-      <div style={{ padding: '20px', backgroundColor: '#f4f4f4', border: '2px dashed #ccc' }}>
-        <p style={{ margin: 0, padding: 0, fontSize: '1.1rem', color: '#333' }}>
-          Name <b style={{ color: '#0056b3', fontWeight: '900', textTransform: 'uppercase' }}>John</b>
-        </p>
-      </div>
-      <section style={{ padding: '20px', backgroundColor: '#fff', border: '2px solid #aaa', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-        <p style={{ margin: 0, padding: 0, fontSize: '1.1rem', color: '#333' }}>
-          Name <em style={{ color: '#0056b3', fontStyle: 'normal', fontWeight: '900', textTransform: 'uppercase' }}>John</em>
-        </p>
+          <button className="primary-btn">Explore Store</button>
+        </div>
       </section>
 
-      {/* Pair 3: Equivalent. Different list tags, complex item styles. */}
-      <ul style={{ margin: '15px', padding: '10px', backgroundColor: '#fff8e1', borderLeft: '3px solid #ffc107' }}>
-        <li style={{ color: '#856404', padding: '5px', fontWeight: 'bold' }}>Item A</li>
-        <li style={{ color: '#856404', padding: '5px', fontWeight: 'bold' }}>Item B</li>
-      </ul>
-      <ol style={{ margin: '15px', padding: '10px', backgroundColor: '#e6f7ff', borderLeft: '3px solid #007bff' }}>
-        <li style={{ color: '#0056b3', padding: '5px', fontWeight: 'bold' }}>Item A</li>
-        <li style={{ color: '#0056b3', padding: '5px', fontWeight: 'bold' }}>Item B</li>
-      </ol>
+      {/* FILTERS */}
+      <section className="filters">
+        {["All", "Laptop", "Mobile", "Audio", "Wearable", "Accessories"].map(
+          (cat) => (
+            <button
+              key={cat}
+              className={filter === cat ? "active" : ""}
+              onClick={() => setFilter(cat)}
+            >
+              {cat}
+            </button>
+          )
+        )}
+      </section>
 
-      {/* Pair 4: NON-Equivalent. Different node order. */}
-      <div style={{ backgroundColor: '#f8f9fa', padding: '10px', fontFamily: 'Verdana', fontSize: '16px' }}>
-        Hello <span style={{ color: 'red', fontWeight: 'bold', margin: '0 5px' }}>World</span>
-      </div>
-      <div style={{ backgroundColor: '#f8f9fa', padding: '10px', fontFamily: 'Verdana', fontSize: '16px' }}>
-        <span style={{ color: 'red', fontWeight: 'bold', margin: '0 5px' }}>Hello</span> World
-      </div>
-      <div>
-         <span style={{ color: 'red', fontWeight: 'bold', margin: '0 5px' }}>Hello</span><span style={{ color: 'red', fontWeight: 'bold', margin: '0 5px' }}>World</span>
-      </div>
+      {/* PRODUCTS */}
+      <section className="products">
+        {filteredProducts.map((product) => (
+          <div className="product-card" key={product.id}>
+            <div className="image-wrapper">
+              <img src={product.image} alt={product.name} />
+              <span className="rating">⭐ {product.rating}</span>
+            </div>
 
-      {/* Pair 5: NON-Equivalent. Different nesting depth. */}
-      <div style={{ border: '5px solid purple', padding: '25px', margin: '10px', backgroundColor: '#f3e5f5' }}>
-        <p style={{ margin: 0, padding: '10px', backgroundColor: '#e1bee7', color: '#4a148c', fontWeight: '600' }}>
-          Deep Content
-        </p>
-      </div>
-      <p
-        style={{
-          margin: '10px',
-          padding: '35px',
-          backgroundColor: '#e1bee7',
-          color: '#4a148c',
-          fontWeight: '600',
-          border: '5px solid purple'
-        }}
-        title='hello wrld'
-      >
-        Deep Content
-      </p>
-      <h1>Hello Ayushman</h1>
-    </>
-  )
-}
+            <h3>{product.name}</h3>
+            <p className="category">{product.category}</p>
+            <p className="price">${product.price}</p>
 
-function Contact5() {
-  return (
-    <>
-      <h2>Newly Added 6</h2 >
+            <button
+              className="add-btn"
+              onClick={() => addToCart(product)}
+            >
+              Add to Cart
+            </button>
+          </div>
+        ))}
+      </section>
 
-    </>
-  )
-}
+      {/* CART */}
+      <aside className="cart-panel">
+        <h2>Your Cart</h2>
 
-function DummyContent2() {
-  return (
-    <>
-      <h2>This is a dummy content.</h2 >
-      <p>Contact Page 3 - Reach us at contact @example.com.</p>
-      <p>This is a new content for Dummy Page.</p>
-    </>
-  )
-}
+        {cart.length === 0 && <p>No items added</p>}
 
-function DummyContent3() {
-  return (
-    <>
-      <h2>This is a dummy content 3. The new page.</h2 >
-      <p>Contact Page 3 - Reach us at contact @example.com.</p>
-      <p>This is a new content for Dummy Page.</p>
-    </>
-  )
-}
+        {cart.map((item, index) => (
+          <div className="cart-item" key={index}>
+            <span>{item.name}</span>
+            <span>${item.price}</span>
+            <button onClick={() => removeFromCart(index)}>✖</button>
+          </div>
+        ))}
 
-function NotFound() {
-  return <h2>404 - Page Not Found</h2>;
-}
+        <div className="cart-total">
+          <strong>Total:</strong> ${totalPrice}
+        </div>
 
-function App() {
-  return (
-    <Router>
-      <nav style={{ margin: 10 }}>
-        <Link to="/" style={{ margin: 5 }}>Home</Link>
-        <Link to="/contact" style={{ margin: 5 }}>Contact</Link>
-        {/* <Link to="/contact5" style={{ margin: 5 }}>Home</Link> */}
-        {/* <Link to="/test1" style={{ margin:5 }}>About</Link>
-        <Link to="/contact" style={{ margin:5 }}>Contact</Link> */}
+        <button className="checkout-btn">Checkout</button>
+      </aside>
 
-
-      </nav>
-      <Routes>
-        <Route path="/" element={<Contact4 />} />
-        <Route path="/contact" element={<Contact3 />} />
-        <Route path="/contact2" element={<Contact2 />} />
-        {/* <Route path="/contact5" element={<Contact5 />} /> */}
-      </Routes>
-    </Router>
+      {/* FOOTER */}
+      <footer className="footer">
+        <p>© 2026 ElectroMax. Designed for performance.</p>
+      </footer>
+    </div>
   );
 }
-
-export default App;
